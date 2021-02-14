@@ -1,0 +1,141 @@
+$main-font: "Chelsea Market",
+Arial,
+Helvetica,
+sans-serif;
+$secondary-font: Arial,
+Helvetica,
+sans-serif;
+$body-font: Arial,
+Helvetica,
+sans-serif;
+$palette-purple: #3E1052;
+$palette-green: #00704A;
+$palette-teal: #00B2AF;
+$palette-yellow: #FFD747;
+$palette-orange: #F47736;
+
+@mixin no-bullets {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+// Header section
+header {
+    width: 100%;
+    background-color: $palette-purple;
+    text-align: center;
+    padding: 1rem 0;
+
+    h1 {
+        font-family: $main-font;
+        color: white;
+        margin: 0;
+        font-size: 3rem;
+    }
+
+    nav {
+        color: white;
+        font-family: $secondary-font;
+        text-transform: uppercase;
+
+        ul {
+            @include no-bullets();
+            display: flex;
+            flex-flow: row;
+            justify-content: center;
+            margin-top: 1rem;
+
+            li {
+                width: 10%;
+            }
+
+            a {
+                display: block;
+                text-decoration: none;
+                color: white;
+                padding: 0.5rem 0;
+            }
+
+            a:hover {
+                background-color: $palette-teal;
+            }
+
+            a:visited {
+                text-decoration: none;
+                color: white;
+            }
+        }
+    }
+}
+
+// Hero image
+#hero {
+    img {
+        width: 100%;
+    }
+}
+
+//Body content
+main {
+    padding: 2rem;
+    font-family: $body-font;
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+
+    article {
+        margin: 0 1rem;
+        background-color: $palette-yellow;
+
+        h2 {
+            font-family: $secondary-font;
+            text-align: center;
+            margin: 0;
+        }
+
+
+    }
+
+    #small-cards {
+        display: flex;
+        flex-flow: row;
+
+        img {
+            width: 100%;
+        }
+
+        .article-text {
+            padding: 1rem;
+        }
+    }
+
+    #big-cards {
+
+        article {
+            display: flex;
+            flex-flow: row;
+            margin-top: 2rem;
+
+            .article-text {
+                padding: 2rem;
+            }
+
+            img {
+                width: 50%;
+            }
+        }
+
+
+    }
+}
+
+footer {
+    background-color: $palette-purple;
+    color: white;
+    width: 100%;
+    height:200px;
+    p{
+        margin:0;
+    }
+}

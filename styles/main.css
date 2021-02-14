@@ -1,0 +1,96 @@
+header {
+  width: 100%;
+  background-color: #3E1052;
+  text-align: center;
+  padding: 1rem 0;
+}
+header h1 {
+  font-family: "Chelsea Market", Arial, Helvetica, sans-serif;
+  color: white;
+  margin: 0;
+  font-size: 3rem;
+}
+header nav {
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  text-transform: uppercase;
+}
+header nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
+  margin-top: 1rem;
+}
+header nav ul li {
+  width: 10%;
+}
+header nav ul a {
+  display: block;
+  text-decoration: none;
+  color: white;
+  padding: 0.5rem 0;
+}
+header nav ul a:hover {
+  background-color: #00B2AF;
+}
+header nav ul a:visited {
+  text-decoration: none;
+  color: white;
+}
+
+#hero img {
+  width: 100%;
+}
+
+main {
+  padding: 2rem;
+  font-family: Arial, Helvetica, sans-serif;
+  width: 80%;
+  margin: auto;
+  overflow: hidden;
+}
+main article {
+  margin: 0 1rem;
+  background-color: #FFD747;
+}
+main article h2 {
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  margin: 0;
+}
+main #small-cards {
+  display: flex;
+  flex-flow: row;
+}
+main #small-cards img {
+  width: 100%;
+}
+main #small-cards .article-text {
+  padding: 1rem;
+}
+main #big-cards article {
+  display: flex;
+  flex-flow: row;
+  margin-top: 2rem;
+}
+main #big-cards article .article-text {
+  padding: 2rem;
+}
+main #big-cards article img {
+  width: 50%;
+}
+
+footer {
+  background-color: #3E1052;
+  color: white;
+  width: 100%;
+  height: 200px;
+}
+footer p {
+  margin: 0;
+}
+
+/*# sourceMappingURL=main.css.map */
