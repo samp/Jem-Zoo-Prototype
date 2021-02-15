@@ -59,6 +59,16 @@ header nav ul a {
   padding: 1rem 0;
 }
 
+#hero .hero-text {
+  position: absolute;
+  display: none;
+  left: 20%;
+  bottom: 50%;
+  font-family: "Montserrat", Arial, Helvetica, sans-serif;
+  font-size: 2rem;
+  color: white;
+  max-width: 12rem;
+}
 #hero img {
   width: 100%;
 }

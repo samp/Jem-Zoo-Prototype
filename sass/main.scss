@@ -103,6 +103,16 @@ header {
 
 // Hero image
 #hero {
+    .hero-text {
+        position: absolute;
+        display: none;
+        left: 20%;
+        bottom:50%;
+        font-family: $secondary-font;
+        font-size: 2rem;
+        color: white;
+        max-width: 12rem;
+      }
     img {
         width: 100%;
     }
