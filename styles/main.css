@@ -7,18 +7,13 @@ body {
 }
 
 header {
+  color: white;
   width: 100%;
   background-color: #3E1052;
   text-align: center;
-  padding: 1rem 0;
+  padding: 1rem 0 0;
   position: sticky;
   top: 0px;
-}
-header h1 {
-  font-family: "Chelsea Market", Arial, Helvetica, sans-serif;
-  color: white;
-  margin: 0;
-  font-size: 3rem;
 }
 header a {
   text-decoration: none;
@@ -28,12 +23,16 @@ header a:visited {
   text-decoration: none;
   color: white;
 }
+header h1 {
+  font-family: "Chelsea Market", Arial, Helvetica, sans-serif;
+  margin: 0;
+  font-size: 3rem;
+}
 header .toggle {
   display: none;
 }
 header nav {
-  color: white;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Montserrat", Arial, Helvetica, sans-serif;
   text-transform: uppercase;
 }
 header nav ul {
@@ -42,20 +41,22 @@ header nav ul {
   margin: 0;
   display: flex;
   flex-flow: row;
-  width: calc(80% - 2rem);
+  width: 80%;
   margin: 1rem auto 0;
+}
+header nav ul a {
+  transition: background-color 0.2s linear;
+}
+header nav ul a:hover {
+  background-color: #00B2AF;
+  transition: background-color 0.2s linear;
 }
 header nav ul li {
   width: 25%;
 }
 header nav ul a {
   display: block;
-  padding: 0.5rem 0;
-  transition: background-color 0.2s linear;
-}
-header nav ul a:hover {
-  background-color: #00B2AF;
-  transition: background-color 0.2s linear;
+  padding: 1rem 0;
 }
 
 #hero img {
@@ -63,17 +64,47 @@ header nav ul a:hover {
 }
 
 main {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Open Sans", Arial, Helvetica, sans-serif;
   width: 80%;
   max-width: 1500px;
   margin: 2rem auto;
+}
+main button {
+  transition: background-color 0.2s linear;
+}
+main button:hover {
+  background-color: #00B2AF;
+  transition: background-color 0.2s linear;
+}
+main picture,
+main img {
+  display: block;
+}
+main button {
+  background-color: #00704A;
+  display: inline-block;
+  margin: 0 auto 0;
+  border: none;
+  border-radius: 1rem;
+}
+main button a {
+  text-decoration: none;
+  color: white;
+}
+main button a:visited {
+  text-decoration: none;
+  color: white;
+}
+main button a {
+  padding: 1rem;
+  display: block;
 }
 main article {
   margin: 0 1rem;
   background-color: #FFD747;
 }
 main article h2 {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Montserrat", Arial, Helvetica, sans-serif;
   text-align: center;
   margin: 0;
 }
@@ -81,8 +112,24 @@ main #small-cards {
   display: flex;
   flex-flow: row;
 }
+main #small-cards a {
+  text-decoration: none;
+  color: black;
+}
+main #small-cards a:visited {
+  text-decoration: none;
+  color: black;
+}
 main #small-cards article {
   max-width: calc(25% - 2rem);
+}
+main #small-cards a > * {
+  transition: all 0.2s linear;
+}
+main #small-cards a:hover > * {
+  background-color: #00B2AF;
+  color: white;
+  transition: all 0.2s linear;
 }
 main #small-cards img {
   width: 100%;
@@ -98,13 +145,16 @@ main #big-cards article {
 }
 main #big-cards article .article-text {
   padding: 2rem;
+  width: calc(50% - 4rem);
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
 }
 main #big-cards article picture {
   min-width: 50%;
-  display: block;
+  max-width: 50%;
 }
 main #big-cards article img {
-  display: block;
   width: 100%;
 }
 main #big-cards article:nth-child(even) {
@@ -118,7 +168,7 @@ footer {
   height: 200px;
   text-align: center;
   padding-top: 2rem;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Open Sans", Arial, Helvetica, sans-serif;
 }
 footer p {
   margin: 0;
@@ -156,6 +206,10 @@ footer p {
   }
 }
 @media only screen and (max-width: 550px) {
+  header {
+    position: static;
+    padding-bottom: 1rem;
+  }
   header nav label.toggle {
     display: block;
     padding-top: 1rem;
@@ -191,8 +245,11 @@ footer p {
     flex-flow: row;
     min-width: calc(100% - 2rem);
   }
+  main #small-cards article picture {
+    width: 100%;
+  }
   main #small-cards article img {
-    max-width: 50%;
+    width: 100%;
   }
   main #big-cards article:nth-child(even) {
     flex-flow: column;
@@ -202,8 +259,15 @@ footer p {
     margin-bottom: 1rem;
     flex-flow: column;
   }
+  main #big-cards article picture {
+    min-width: 100%;
+    max-width: 100%;
+  }
   main #big-cards article img {
     width: 100%;
+  }
+  main #big-cards article .article-text {
+    width: calc(100% - 2rem);
   }
 }
 

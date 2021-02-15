@@ -2,10 +2,12 @@ $main-font: "Chelsea Market",
 Arial,
 Helvetica,
 sans-serif;
-$secondary-font: Arial,
+$secondary-font: "Montserrat",
+Arial,
 Helvetica,
 sans-serif;
-$body-font: Arial,
+$body-font: "Open Sans",
+Arial,
 Helvetica,
 sans-serif;
 $palette-purple: #3E1052;
@@ -20,6 +22,29 @@ $palette-orange: #F47736;
     margin: 0;
 }
 
+@mixin plain-links($colour) {
+    a {
+        text-decoration: none;
+        color: $colour;
+    }
+
+    a:visited {
+        text-decoration: none;
+        color: $colour;
+    }
+}
+
+@mixin hover-links($element) {
+    #{$element} {
+        transition: background-color 0.2s linear;
+    }
+
+    #{$element}:hover {
+        background-color: $palette-teal;
+        transition: background-color 0.2s linear;
+    }
+}
+
 html {
     min-width: 350px;
 }
@@ -30,28 +55,20 @@ body {
 
 // Header section
 header {
+    @include plain-links(white);
+
+    color: white;
     width: 100%;
     background-color: $palette-purple;
     text-align: center;
-    padding: 1rem 0;
+    padding: 1rem 0 0;
     position: sticky;
     top: 0px;
 
     h1 {
         font-family: $main-font;
-        color: white;
         margin: 0;
         font-size: 3rem;
-    }
-
-    a {
-        text-decoration: none;
-        color: white;
-    }
-
-    a:visited {
-        text-decoration: none;
-        color: white;
     }
 
     .toggle {
@@ -59,15 +76,16 @@ header {
     }
 
     nav {
-        color: white;
         font-family: $secondary-font;
         text-transform: uppercase;
 
         ul {
             @include no-bullets();
+            @include hover-links(a);
+
             display: flex;
             flex-flow: row;
-            width: calc(80% - 2rem);
+            width: 80%;
             margin: 1rem auto 0;
 
             li {
@@ -76,13 +94,8 @@ header {
 
             a {
                 display: block;
-                padding: 0.5rem 0;
-                transition: background-color 0.2s linear;
-            }
+                padding: 1rem 0;
 
-            a:hover {
-                background-color: $palette-teal;
-                transition: background-color 0.2s linear;
             }
         }
     }
@@ -97,11 +110,32 @@ header {
 
 //Body content
 main {
-    //padding: 2rem;
+    @include hover-links(button);
     font-family: $body-font;
     width: 80%;
     max-width: 1500px;
     margin: 2rem auto;
+
+    picture,
+    img {
+        display: block;
+    }
+
+    button {
+        //width: 10rem;
+        background-color: $palette-green;
+        display: inline-block;
+        @include plain-links(white);
+        margin: 0 auto 0;
+        border: none;
+        border-radius: 1rem;
+
+        a {
+            padding: 1rem;
+            display: block;
+
+        }
+    }
 
     article {
         margin: 0 1rem;
@@ -115,6 +149,9 @@ main {
     }
 
     #small-cards {
+        @include plain-links(black);
+        //@include hover-links(a>*);
+
         display: flex;
         flex-flow: row;
 
@@ -122,8 +159,17 @@ main {
             max-width: calc(25% - 2rem);
         }
 
+        a>* {
+            transition: all 0.2s linear;
+        }
+
+        a:hover>* {
+            background-color: $palette-teal;
+            color: white;
+            transition: all 0.2s linear;
+        }
+
         img {
-            
             width: 100%;
         }
 
@@ -142,15 +188,18 @@ main {
 
             .article-text {
                 padding: 2rem;
+                width: calc(50% - 4rem);
+                display: flex;
+                flex-flow: column;
+                justify-content: space-between;
             }
 
             picture {
                 min-width: 50%;
-                display: block;
+                max-width: 50%;
             }
 
             img {
-                display: block;
                 width: 100%;
             }
         }
@@ -228,6 +277,9 @@ footer {
 
 @media only screen and (max-width: 550px) {
     header {
+        position: static;
+        //top: 0px;
+        padding-bottom: 1rem;
         nav {
             label.toggle {
                 display: block;
@@ -278,23 +330,36 @@ footer {
                 flex-flow: row;
                 min-width: calc(100% - 2rem);
 
+                picture {
+                    width: 100%;
+                }
+
                 img {
-                    max-width: 50%;
+                    width: 100%;
                 }
             }
         }
-        
+
         #big-cards {
             article:nth-child(even) {
                 flex-flow: column;
             }
+
             article {
                 margin-top: 0;
                 margin-bottom: 1rem;
                 flex-flow: column;
 
+                picture {
+                    min-width: 100%;
+                    max-width: 100%;
+                }
+
                 img {
                     width: 100%;
+                }
+                .article-text{
+                    width: calc(100% - 2rem);
                 }
             }
         }
