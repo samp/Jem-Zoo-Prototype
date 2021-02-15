@@ -13,8 +13,10 @@
 
 <body>
     <header>
-        <h1>Jem Zoo</h1>
+        <h1><a href="index.html">Jem Zoo</a></h1>
         <nav>
+            <input id="collapsible" class="toggle" type="checkbox">
+            <label for="collapsible" class="toggle">Menu</label>
             <ul>
                 <li><a href="#">Animals</a></li>
                 <li><a href="#">Things to do</a></li>
@@ -41,7 +43,7 @@
             </article>
             <article>
                 <picture></picture>
-                <img src="https://picsum.photos/450"></img>
+                <img src="https://picsum.photos/1000"></img>
                 <div class="article-text">
                     <h2>Events</h2>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
@@ -51,7 +53,7 @@
             </article>
             <article>
                 <picture></picture>
-                <img src="https://picsum.photos/450"></img>
+                <img src="https://picsum.photos/500"></img>
                 <div class="article-text">
                     <h2>Conservation</h2>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
@@ -60,8 +62,11 @@
                 </div>
             </article>
             <article>
-                <picture></picture>
-                <img src="https://picsum.photos/450"></img>
+                <picture>
+                    <source srcset="images/aquarium-square-200.webp" media="(max-width: 450px)">
+                        <source srcset="images/aquarium-square-500.webp" media="(min-width: 450px)">
+                    <img src="images/aquarium-square.png" alt=""></img>
+                </picture>
                 <div class="article-text">
                     <h2>Membership</h2>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut

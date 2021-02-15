@@ -1,14 +1,35 @@
+html {
+  min-width: 350px;
+}
+
+body {
+  width: 100%;
+}
+
 header {
   width: 100%;
   background-color: #3E1052;
   text-align: center;
   padding: 1rem 0;
+  position: sticky;
+  top: 0px;
 }
 header h1 {
   font-family: "Chelsea Market", Arial, Helvetica, sans-serif;
   color: white;
   margin: 0;
   font-size: 3rem;
+}
+header a {
+  text-decoration: none;
+  color: white;
+}
+header a:visited {
+  text-decoration: none;
+  color: white;
+}
+header .toggle {
+  display: none;
 }
 header nav {
   color: white;
@@ -21,24 +42,20 @@ header nav ul {
   margin: 0;
   display: flex;
   flex-flow: row;
-  justify-content: center;
-  margin-top: 1rem;
+  width: calc(80% - 2rem);
+  margin: 1rem auto 0;
 }
 header nav ul li {
-  width: 10%;
+  width: 25%;
 }
 header nav ul a {
   display: block;
-  text-decoration: none;
-  color: white;
   padding: 0.5rem 0;
+  transition: background-color 0.2s linear;
 }
 header nav ul a:hover {
   background-color: #00B2AF;
-}
-header nav ul a:visited {
-  text-decoration: none;
-  color: white;
+  transition: background-color 0.2s linear;
 }
 
 #hero img {
@@ -46,11 +63,10 @@ header nav ul a:visited {
 }
 
 main {
-  padding: 2rem;
   font-family: Arial, Helvetica, sans-serif;
   width: 80%;
-  margin: auto;
-  overflow: hidden;
+  max-width: 1500px;
+  margin: 2rem auto;
 }
 main article {
   margin: 0 1rem;
@@ -64,6 +80,9 @@ main article h2 {
 main #small-cards {
   display: flex;
   flex-flow: row;
+}
+main #small-cards article {
+  max-width: calc(25% - 2rem);
 }
 main #small-cards img {
   width: 100%;
@@ -91,6 +110,92 @@ footer {
 }
 footer p {
   margin: 0;
+}
+
+@media only screen and (max-width: 1200px) {
+  header nav ul {
+    width: calc(100% - 2rem);
+  }
+  header nav ul li {
+    width: 25%;
+  }
+
+  main {
+    margin: 1rem auto;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 900px) {
+  main #small-cards {
+    flex-wrap: wrap;
+  }
+  main #small-cards article {
+    margin-left: 1rem;
+    margin-right: 0;
+    max-width: calc(50% - 1.5rem);
+    margin-bottom: 1rem;
+  }
+  main #big-cards article {
+    margin-top: 0;
+    margin-bottom: 1rem;
+  }
+  main #big-cards article .article-text {
+    padding: 1rem;
+  }
+}
+@media only screen and (max-width: 550px) {
+  header nav label.toggle {
+    display: block;
+    padding-top: 1rem;
+  }
+  header nav ul {
+    max-height: 0px;
+    overflow: hidden;
+    flex-flow: column;
+    margin-top: 0;
+  }
+  header nav ul li {
+    width: 100%;
+  }
+  header nav .toggle:checked + .toggle + ul {
+    max-height: 100%;
+  }
+  header nav .toggle:checked + label {
+    padding-bottom: 1rem;
+  }
+}
+@media only screen and (max-width: 450px) {
+  main article h2 {
+    font-size: 1.2em;
+  }
+  main article p {
+    font-size: 0.8em;
+  }
+  main #small-cards {
+    flex-flow: column;
+  }
+  main #small-cards article {
+    display: flex;
+    flex-flow: row;
+    max-width: calc(100% - 2rem);
+  }
+  main #small-cards article img {
+    max-width: 50%;
+  }
+  main #small-cards article:nth-child(odd) {
+    flex-flow: row-reverse;
+  }
+  main #big-cards article {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    flex-flow: column;
+  }
+  main #big-cards article img {
+    width: 100%;
+  }
+  main #big-cards article:nth-child(even) {
+    flex-flow: column-reverse;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */
