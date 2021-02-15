@@ -32,8 +32,12 @@
     <main>
         <div id="small-cards">
             <article>
-                <picture></picture>
-                <img src="https://picsum.photos/450"></img>
+                <picture>
+                    <source srcset="images/giraffe-square-500.webp" media="(min-width: 450px)">
+                    <source srcset="images/giraffe-square-200.webp" media="(max-width: 450px)">
+                    <img src="images/giraffe-square.png" alt="A giraffe looks over a fence."></img>
+                </picture>
+
                 <div class="article-text">
                     <h2>Animals</h2>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
@@ -42,8 +46,12 @@
                 </div>
             </article>
             <article>
-                <picture></picture>
-                <img src="https://picsum.photos/1000"></img>
+                <picture>
+                    <source srcset="images/garden-square-500.webp" media="(min-width: 450px)">
+                    <source srcset="images/garden-square-200.webp" media="(max-width: 450px)">
+                    <img src="images/garden-square.png" alt="A group of people walk through a colourful garden."></img>
+                </picture>
+
                 <div class="article-text">
                     <h2>Events</h2>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
@@ -52,8 +60,12 @@
                 </div>
             </article>
             <article>
-                <picture></picture>
-                <img src="https://picsum.photos/500"></img>
+                <picture>
+                    <source srcset="images/owl-square-500.webp" media="(min-width: 450px)">
+                    <source srcset="images/owl-square-200.webp" media="(max-width: 450px)">
+                    <img src="images/owl-square.png" alt="A barn owl takes off from a tree branch."></img>
+                </picture>
+
                 <div class="article-text">
                     <h2>Conservation</h2>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
@@ -63,9 +75,9 @@
             </article>
             <article>
                 <picture>
+                    <source srcset="images/aquarium-square-500.webp" media="(min-width: 450px)">
                     <source srcset="images/aquarium-square-200.webp" media="(max-width: 450px)">
-                        <source srcset="images/aquarium-square-500.webp" media="(min-width: 450px)">
-                    <img src="images/aquarium-square.png" alt=""></img>
+                    <img src="images/aquarium-square.png" alt="A family view a large aquarium."></img>
                 </picture>
                 <div class="article-text">
                     <h2>Membership</h2>
@@ -78,29 +90,46 @@
 
         <div id="big-cards">
             <article>
-                <picture></picture>
-                <img src="https://picsum.photos/880/450"></img>
+                <picture>
+                    <source srcset="images/panda-750.webp" media="(min-width: 900px)">
+                    <source srcset="images/panda-square-450.webp" media="(max-width: 900px)">
+                    <source srcset="images/panda-450.webp" media="(max-width: 450px)">
+
+                    <img src="images/panda-fallback.jpg" alt="Close up shot of Kenny the red panda"></img>
+                </picture>
+
                 <div class="article-text">
                     <h2>Animal Spotlight</h2>
+                    <p>his name is kenny :)</p>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
                         labore
                         et dolore magna aliqua.</p>
                 </div>
             </article>
             <article>
-
+                <picture>
+                    <source srcset="images/parrots-750.webp" media="(min-width: 900px)">
+                    <source srcset="images/parrots-square-450.webp" media="(max-width: 900px)">
+                    <source srcset="images/parrots-450.webp" media="(max-width: 450px)">
+                    <img src="images/parrotss-fallback.jpg" alt="Two blue parrots look to the left."></img>
+                </picture>
                 <div class="article-text">
                     <h2>Donate</h2>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
                         labore
                         et dolore magna aliqua.</p>
                 </div>
-                <picture></picture>
-                <img src="https://picsum.photos/880/450"></img>
+
+
             </article>
             <article>
-                <picture></picture>
-                <img src="https://picsum.photos/880/450"></img>
+                <picture>
+                    <source srcset="images/deer-750.webp" media="(min-width: 900px)">
+                    <source srcset="images/deer-square-450.webp" media="(max-width: 900px)">
+                    <source srcset="images/deer-450.webp" media="(max-width: 450px)">
+                    <img src="images/deer-fallback.jpg" alt="A child feeds deer through a fence."></img>
+                </picture>
+
                 <div class="article-text">
                     <h2>Families</h2>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
