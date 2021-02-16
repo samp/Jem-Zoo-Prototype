@@ -15,13 +15,35 @@ header {
   position: sticky;
   top: 0px;
 }
-header a {
-  text-decoration: none;
-  color: white;
-}
+header a,
 header a:visited {
   text-decoration: none;
   color: white;
+}
+@media only screen and (max-width: 550px) {
+  header header {
+    position: static;
+    padding-bottom: 1rem;
+  }
+  header nav label.toggle {
+    display: block;
+    padding-top: 1rem;
+  }
+  header nav ul {
+    max-height: 0px;
+    overflow: hidden;
+    flex-flow: column;
+    margin-top: 0;
+  }
+  header nav ul li {
+    width: 100%;
+  }
+  header nav .toggle:checked + .toggle + ul {
+    max-height: 100%;
+  }
+  header nav .toggle:checked + label {
+    padding-bottom: 1rem;
+  }
 }
 header h1 {
   font-family: "Chelsea Market", Arial, Helvetica, sans-serif;
@@ -44,12 +66,18 @@ header nav ul {
   width: 80%;
   margin: 1rem auto 0;
 }
-header nav ul a {
-  transition: background-color 0.2s linear;
+header nav ul a,
+header nav ul a:hover {
+  transition: all 0.2s linear;
 }
 header nav ul a:hover {
+  color: white;
   background-color: #00B2AF;
-  transition: background-color 0.2s linear;
+}
+@media only screen and (max-width: 1200px) {
+  header nav ul {
+    width: calc(100% - 2rem);
+  }
 }
 header nav ul li {
   width: 25%;
@@ -79,16 +107,32 @@ main {
   max-width: 1500px;
   margin: 2rem auto;
 }
-main button {
-  transition: background-color 0.2s linear;
+main button,
+main button:hover {
+  transition: all 0.2s linear;
 }
 main button:hover {
+  color: white;
   background-color: #00B2AF;
-  transition: background-color 0.2s linear;
+}
+@media only screen and (max-width: 1200px) {
+  main {
+    margin: 1rem auto;
+    width: 100%;
+  }
+}
+main .card-text {
+  line-height: 1.3;
 }
 main picture,
 main img {
   display: block;
+}
+main img {
+  width: 100%;
+}
+main p {
+  line-height: 1.3;
 }
 main button {
   background-color: #00704A;
@@ -97,10 +141,7 @@ main button {
   border: none;
   border-radius: 1rem;
 }
-main button a {
-  text-decoration: none;
-  color: white;
-}
+main button a,
 main button a:visited {
   text-decoration: none;
   color: white;
@@ -118,57 +159,117 @@ main article h2 {
   text-align: center;
   margin: 0;
 }
-main #small-cards {
+@media only screen and (max-width: 450px) {
+  main article h2 {
+    font-size: 1.2em;
+  }
+}
+@media only screen and (max-width: 450px) {
+  main article p {
+    font-size: 0.8em;
+  }
+}
+main #cards-4 {
   display: flex;
   flex-flow: row;
+  flex-wrap: wrap;
 }
-main #small-cards a {
+main #cards-4 a,
+main #cards-4 a:visited {
   text-decoration: none;
   color: black;
 }
-main #small-cards a:visited {
-  text-decoration: none;
-  color: black;
-}
-main #small-cards article {
-  max-width: calc(25% - 2rem);
-}
-main #small-cards a > * {
+main #cards-4 a > *,
+main #cards-4 a > *:hover {
   transition: all 0.2s linear;
 }
-main #small-cards a:hover > * {
-  background-color: #00B2AF;
+main #cards-4 a > *:hover {
   color: white;
-  transition: all 0.2s linear;
+  background-color: #00B2AF;
 }
-main #small-cards img {
-  width: 100%;
+@media only screen and (max-width: 450px) {
+  main #cards-4 {
+    flex-flow: column;
+  }
 }
-main #small-cards .article-text {
-  padding: 1rem;
-}
-main #big-cards article {
-  display: flex;
-  flex-flow: row;
-  margin-top: 2rem;
-  width: calc(100% - 2rem);
-}
-main #big-cards article .article-text {
-  padding: 2rem;
-  width: calc(50% - 4rem);
+main #cards-4 a {
   display: flex;
   flex-flow: column;
-  justify-content: space-between;
+  height: 100%;
+  flex-grow: 1;
 }
-main #big-cards article picture {
+main #cards-4 > * {
+  max-width: calc(25% - 2rem);
+  margin-bottom: 2rem;
+}
+@media only screen and (max-width: 900px) {
+  main #cards-4 > * {
+    margin-left: 1rem;
+    margin-right: 0;
+    max-width: calc(50% - 1.5rem);
+    margin-bottom: 1rem;
+  }
+}
+@media only screen and (max-width: 450px) {
+  main #cards-4 > * {
+    display: flex;
+    flex-flow: row;
+    min-width: calc(100% - 2rem);
+  }
+}
+main #cards-4 .card-text {
+  flex-grow: 1;
+  padding: 1rem;
+}
+main #cards-1 > * {
+  display: flex;
+  flex-flow: row;
+  margin-bottom: 2rem;
+  width: calc(100% - 2rem);
+}
+@media only screen and (max-width: 900px) {
+  main #cards-1 > * {
+    margin-bottom: 1rem;
+  }
+}
+@media only screen and (max-width: 450px) {
+  main #cards-1 > * {
+    margin-bottom: 1rem;
+    flex-flow: column;
+  }
+}
+main #cards-1 > * .card-text {
+  padding: 2rem;
+  width: calc(50% - 4rem);
+}
+@media only screen and (max-width: 900px) {
+  main #cards-1 > * .card-text {
+    padding: 1rem;
+    width: calc(50% - 2rem);
+  }
+}
+@media only screen and (max-width: 450px) {
+  main #cards-1 > * .card-text {
+    width: calc(100% - 2rem);
+  }
+}
+main #cards-1 > * picture {
   min-width: 50%;
   max-width: 50%;
 }
-main #big-cards article img {
-  width: 100%;
+@media only screen and (max-width: 450px) {
+  main #cards-1 > * picture {
+    min-width: 100%;
+    max-width: 100%;
+  }
 }
-main #big-cards article:nth-child(even) {
+main #cards-1 article:nth-child(even) {
   flex-flow: row-reverse;
+}
+@media only screen and (max-width: 450px) {
+  main #cards-1 article:nth-child(even) {
+    flex-flow: column;
+  }
 }
 
 footer {
@@ -182,103 +283,6 @@ footer {
 }
 footer p {
   margin: 0;
-}
-
-@media only screen and (max-width: 1200px) {
-  header nav ul {
-    width: calc(100% - 2rem);
-  }
-  header nav ul li {
-    width: 25%;
-  }
-
-  main {
-    margin: 1rem auto;
-    width: 100%;
-  }
-}
-@media only screen and (max-width: 900px) {
-  main #small-cards {
-    flex-wrap: wrap;
-  }
-  main #small-cards article {
-    margin-left: 1rem;
-    margin-right: 0;
-    max-width: calc(50% - 1.5rem);
-    margin-bottom: 1rem;
-  }
-  main #big-cards article {
-    margin-top: 0;
-    margin-bottom: 1rem;
-  }
-  main #big-cards article .article-text {
-    padding: 1rem;
-  }
-}
-@media only screen and (max-width: 550px) {
-  header {
-    position: static;
-    padding-bottom: 1rem;
-  }
-  header nav label.toggle {
-    display: block;
-    padding-top: 1rem;
-  }
-  header nav ul {
-    max-height: 0px;
-    overflow: hidden;
-    flex-flow: column;
-    margin-top: 0;
-  }
-  header nav ul li {
-    width: 100%;
-  }
-  header nav .toggle:checked + .toggle + ul {
-    max-height: 100%;
-  }
-  header nav .toggle:checked + label {
-    padding-bottom: 1rem;
-  }
-}
-@media only screen and (max-width: 450px) {
-  main article h2 {
-    font-size: 1.2em;
-  }
-  main article p {
-    font-size: 0.8em;
-  }
-  main #small-cards {
-    flex-flow: column;
-  }
-  main #small-cards article {
-    display: flex;
-    flex-flow: row;
-    min-width: calc(100% - 2rem);
-  }
-  main #small-cards article picture {
-    width: 100%;
-  }
-  main #small-cards article img {
-    width: 100%;
-  }
-  main #big-cards article:nth-child(even) {
-    flex-flow: column;
-  }
-  main #big-cards article {
-    margin-top: 0;
-    margin-bottom: 1rem;
-    flex-flow: column;
-  }
-  main #big-cards article picture {
-    min-width: 100%;
-    max-width: 100%;
-  }
-  main #big-cards article img {
-    width: 100%;
-  }
-  main #big-cards article .article-text {
-    width: calc(100% - 2rem);
-  }
 }
 
 /*# sourceMappingURL=main.css.map */
