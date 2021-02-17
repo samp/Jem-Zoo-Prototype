@@ -1,0 +1,68 @@
+@mixin no-bullets {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+@mixin plain-links($colour) {
+
+    a,
+    a:visited {
+        text-decoration: none;
+        color: $colour;
+    }
+}
+
+@mixin hover-links($element, $highlight-color) {
+
+    #{$element},
+    #{$element}:hover {
+        transition: all 0.2s linear;
+    }
+
+    #{$element}:hover {
+        color: white;
+        background-color: $highlight-color;
+    }
+}
+
+@mixin icon-menu($icons) {
+    nav {
+        ul {
+            margin: 0;
+            width: 100%;
+            margin-bottom: 1rem;
+
+            li {
+                width: calc(25% - 1rem);
+
+                @for $i from 1 through length($icons) {
+                    $icon: nth($icons, $i);
+
+                    &:nth-child(#{$i}) {
+
+                        a {
+                            background-image: url(#{$icon});
+                        }
+                    }
+                }
+            }
+
+            a {
+                display: inline-block;
+                background-repeat: no-repeat;
+                background-position: center;
+                //padding-bottom: 1rem !important;
+                height: 2rem;
+                width: 100%;
+                padding: 0.5rem;
+                font-size: 0;
+            }
+        }
+    }
+}
+
+@mixin card-column() {
+    display: flex;
+    flex-flow: column;
+}

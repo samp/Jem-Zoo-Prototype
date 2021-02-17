@@ -21,28 +21,38 @@ header a:visited {
   color: white;
 }
 @media only screen and (max-width: 550px) {
-  header header {
+  header {
     position: static;
     padding-bottom: 1rem;
   }
-  header nav label.toggle {
-    display: block;
-    padding-top: 1rem;
-  }
   header nav ul {
-    max-height: 0px;
-    overflow: hidden;
-    flex-flow: column;
-    margin-top: 0;
+    margin: 0;
+    width: 100%;
+    margin-bottom: 1rem;
   }
   header nav ul li {
+    width: calc(25% - 1rem);
+  }
+  header nav ul li:nth-child(1) a {
+    background-image: url(../images/hippo.svg);
+  }
+  header nav ul li:nth-child(2) a {
+    background-image: url(../images/map.svg);
+  }
+  header nav ul li:nth-child(3) a {
+    background-image: url(../images/hand.svg);
+  }
+  header nav ul li:nth-child(4) a {
+    background-image: url(../images/ticket.svg);
+  }
+  header nav ul a {
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 2rem;
     width: 100%;
-  }
-  header nav .toggle:checked + .toggle + ul {
-    max-height: 100%;
-  }
-  header nav .toggle:checked + label {
-    padding-bottom: 1rem;
+    padding: 0.5rem;
+    font-size: 0;
   }
 }
 header h1 {
@@ -63,7 +73,7 @@ header nav ul {
   margin: 0;
   display: flex;
   flex-flow: row;
-  width: 80%;
+  width: calc(80% - 1rem);
   margin: 1rem auto 0;
 }
 header nav ul a,
