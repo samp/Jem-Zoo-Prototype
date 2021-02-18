@@ -134,6 +134,10 @@ main button:hover {
 main .card-text {
   line-height: 1.3;
 }
+main .headline {
+  font-size: 1.2em;
+  text-align: center;
+}
 main picture,
 main img {
   display: block;
@@ -240,6 +244,7 @@ main #cards-1 > * {
 @media only screen and (max-width: 900px) {
   main #cards-1 > * {
     margin-bottom: 1rem;
+    flex-flow: column;
   }
 }
 @media only screen and (max-width: 450px) {
@@ -251,11 +256,13 @@ main #cards-1 > * {
 main #cards-1 > * .card-text {
   padding: 2rem;
   width: calc(50% - 4rem);
+  display: flex;
+  flex-flow: column;
 }
 @media only screen and (max-width: 900px) {
   main #cards-1 > * .card-text {
     padding: 1rem;
-    width: calc(50% - 2rem);
+    width: calc(100% - 2rem);
   }
 }
 @media only screen and (max-width: 450px) {
@@ -263,21 +270,25 @@ main #cards-1 > * .card-text {
     width: calc(100% - 2rem);
   }
 }
+main #cards-1 > * .card-text button {
+  align-self: center;
+  margin-top: auto;
+}
 main #cards-1 > * picture {
   min-width: 50%;
   max-width: 50%;
 }
-@media only screen and (max-width: 450px) {
+@media only screen and (max-width: 900px) {
   main #cards-1 > * picture {
     min-width: 100%;
     max-width: 100%;
   }
 }
-main #cards-1 article:nth-child(even) {
+main #cards-1 > *:nth-child(even) {
   flex-flow: row-reverse;
 }
-@media only screen and (max-width: 450px) {
-  main #cards-1 article:nth-child(even) {
+@media only screen and (max-width: 900px) {
+  main #cards-1 > *:nth-child(even) {
     flex-flow: column;
   }
 }
