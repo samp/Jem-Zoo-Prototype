@@ -14,13 +14,14 @@ header {
   padding: 1rem 0 0;
   position: sticky;
   top: 0px;
+  z-index: 999;
 }
 header a,
 header a:visited {
   text-decoration: none;
   color: white;
 }
-@media only screen and (max-width: 550px) {
+@media only screen and (max-width: 600px) {
   header {
     position: static;
     padding-bottom: 1rem;
@@ -97,15 +98,45 @@ header nav ul a {
   padding: 1rem 0;
 }
 
+#hero {
+  position: relative;
+}
 #hero .hero-text {
   position: absolute;
-  display: none;
-  left: 20%;
-  bottom: 50%;
+  left: 0;
+  right: 0;
+  bottom: 35%;
+  margin: 0 auto;
   font-family: "Montserrat", Arial, Helvetica, sans-serif;
-  font-size: 2rem;
-  color: white;
-  max-width: 12rem;
+  font-size: 3rem;
+  color: #3E1052;
+  width: calc(80% - 2rem);
+}
+@media only screen and (max-width: 1200px) {
+  #hero .hero-text {
+    bottom: 27%;
+  }
+}
+@media only screen and (max-width: 900px) {
+  #hero .hero-text {
+    font-size: 2.5rem;
+    bottom: 20%;
+  }
+}
+@media only screen and (max-width: 600px) {
+  #hero .hero-text {
+    font-size: 2rem;
+    bottom: 15%;
+  }
+}
+@media only screen and (max-width: 450px) {
+  #hero .hero-text {
+    font-size: 1.5rem;
+    bottom: 15%;
+  }
+}
+#hero .hero-text p {
+  width: 18rem;
 }
 #hero img {
   width: 100%;

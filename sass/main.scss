@@ -23,8 +23,8 @@ $palette-orange: #F47736;
 
 // Breakpoints
 $breakpoint-wide: 1200px;
-$breakpoint-menu: 550px; // Breakpoint for menu collapsing
 $breakpoint-medium: 900px;
+$breakpoint-menu: 600px; // Breakpoint for menu collapsing
 $breakpoint-small: 450px;
 
 // Navigation icons
@@ -58,6 +58,7 @@ header {
     padding: 1rem 0 0;
     position: sticky;
     top: 0px;
+    z-index: 999;
 
     h1 {
         font-family: $main-font;
@@ -101,18 +102,46 @@ header {
 
 // Hero image
 #hero {
+    position: relative;
+
+    picture {
+        //position: absolute;
+    }
+
     .hero-text {
         position: absolute;
-        display: none;
-        left: 20%;
-        bottom: 50%;
+        //left: 20%;
+        //bottom: 50%;
+        left: 0;
+        right: 0;
+        bottom: 35%;
+        margin: 0 auto;
         font-family: $secondary-font;
-        font-size: 2rem;
-        color: white;
-        max-width: 12rem;
+        font-size: 3rem;
+        color: $palette-purple;
+        width: calc(80% - 2rem);
+        @media only screen and (max-width: $breakpoint-wide) {
+            bottom: 27%;
+        }
+        @media only screen and (max-width: $breakpoint-medium) {
+            font-size: 2.5rem;
+            bottom: 20%;
+        }
+        @media only screen and (max-width: $breakpoint-menu) {
+            font-size: 2rem;
+            bottom: 15%;
+        }
+        @media only screen and (max-width: $breakpoint-small) {
+            font-size: 1.5rem;
+            bottom: 15%;
+        }
+        p{
+            width: 18rem;
+        }
     }
 
     img {
+        //display: block;
         width: 100%;
     }
 }
