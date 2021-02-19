@@ -328,10 +328,60 @@ footer {
   background-color: #3E1052;
   color: white;
   width: 100%;
-  height: 200px;
   text-align: center;
-  padding-top: 2rem;
+  padding: 2rem 0;
   font-family: "Open Sans", Arial, Helvetica, sans-serif;
+}
+footer .footer-wrapper {
+  width: calc(80% - 2rem);
+  display: flex;
+  flex-flow: row;
+  margin: auto;
+}
+@media only screen and (max-width: 600px) {
+  footer .footer-wrapper {
+    flex-flow: column;
+  }
+}
+footer .footer-row {
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
+  align-content: center;
+  width: 100%;
+  padding-bottom: 1rem;
+}
+footer .footer-row a {
+  display: flex;
+  align-items: center;
+}
+footer .footer-row img {
+  width: 2.5rem;
+  margin: 0 2rem;
+}
+@media only screen and (max-width: 600px) {
+  footer .footer-row img {
+    margin: 0 1rem;
+  }
+}
+footer .footer-inner-column {
+  width: 50%;
+}
+@media only screen and (max-width: 600px) {
+  footer .footer-inner-column {
+    width: 100%;
+  }
+}
+footer .footer-inner-column ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  line-height: 2rem;
+}
+footer .footer-inner-column ul a,
+footer .footer-inner-column ul a:visited {
+  text-decoration: none;
+  color: white;
 }
 footer p {
   margin: 0;
