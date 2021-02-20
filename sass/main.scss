@@ -47,54 +47,103 @@ header {
 
     @media only screen and (max-width: $breakpoint-menu) {
         position: static;
-        padding-bottom: 1rem;
-        @include mixins.icon-menu($nav-icons);
+        //padding-bottom: 1rem;
+        //@include mixins.icon-menu($nav-icons);
+        @include mixins.collapsing-menu();
     }
 
     color: white;
     width: 100%;
     background-color: $palette-purple;
     text-align: center;
-    padding: 1rem 0 0;
-    position: sticky;
-    top: 0px;
-    z-index: 999;
+
+    img {
+        display: none;
+        height: 3rem;
+        padding: 1rem 2rem;
+
+        @media only screen and (max-width: $breakpoint-menu) {
+            display: block;
+        }
+
+        @media only screen and (max-width: $breakpoint-small) {
+            height: 2rem;
+        }
+    }
 
     h1 {
         font-family: $main-font;
         margin: 0;
         font-size: 3rem;
+        padding: 1rem 0;
+
+        @media only screen and (max-width: $breakpoint-menu) {
+            padding: 1rem 2rem;
+        }
+
+        @media only screen and (max-width: $breakpoint-small) {
+            font-size: 2rem;
+        }
     }
 
-    .toggle {
-        display: none;
+    .header-wrapper {
+        display: flex;
+        flex-flow: row;
+        justify-content: space-between;
+        align-items: stretch;
+        width: calc(80% - 2rem);
+        margin: auto;
+
+        @media only screen and (max-width: $breakpoint-wide) {
+            width: calc(100% - 4rem);
+        }
+
+        @media only screen and (max-width: $breakpoint-medium) {
+            flex-flow: column;
+            width: 100%;
+            height: 100%;
+        }
+
+        @media only screen and (max-width: $breakpoint-menu) {
+            flex-flow: row;
+            align-items: center;
+        }
     }
 
     nav {
         font-family: $secondary-font;
         text-transform: uppercase;
+        width: 66%;
+        display: flex;
+        align-items: center;
+
+        @media only screen and (max-width: $breakpoint-wide) {
+            width: 70%;
+        }
+
+        @media only screen and (max-width: $breakpoint-medium) {
+            width: 100%;
+        }
 
         ul {
             @include mixins.no-bullets();
             @include mixins.hover-links(a, $palette-teal);
-
             display: flex;
             flex-flow: row;
-            width: calc(80% - 1rem);
-            margin: 1rem auto 0;
-
-            @media only screen and (max-width: $breakpoint-wide) {
-                width: calc(100% - 2rem);
-            }
+            align-items: stretch;
+            width: 100%;
 
             li {
                 width: 25%;
+                display: flex;
+                align-items: center;
             }
 
             a {
                 display: block;
-                padding: 1rem 0;
-
+                padding: 1rem 2rem;
+                //margin: auto;
+                width: 100%;
             }
         }
     }
@@ -104,21 +153,15 @@ header {
 #hero {
     position: relative;
 
-    picture {
-        //position: absolute;
-    }
-
     .hero-text {
         position: absolute;
-        //left: 20%;
-        //bottom: 50%;
         left: 0;
         right: 0;
         bottom: 35%;
         margin: 0 auto;
         font-family: $secondary-font;
-        font-size: 3rem;
         color: $palette-purple;
+        font-size: 2rem;
         width: calc(80% - 2rem);
 
         @media only screen and (max-width: $breakpoint-wide) {
@@ -126,12 +169,12 @@ header {
         }
 
         @media only screen and (max-width: $breakpoint-medium) {
-            font-size: 2.5rem;
+            font-size: 1.8rem;
             bottom: 20%;
         }
 
         @media only screen and (max-width: $breakpoint-menu) {
-            font-size: 2rem;
+            //font-size: 1.5rem;
             bottom: 15%;
         }
 
@@ -140,7 +183,8 @@ header {
             bottom: 15%;
         }
 
-        p {
+        &>* {
+
             width: 18rem;
         }
     }
@@ -190,10 +234,11 @@ main {
         background-color: $palette-green;
         display: inline-block;
         @include mixins.plain-links(white);
-        margin: 0 auto 0;
         border: none;
         border-radius: 1rem;
-
+        align-self: center;
+        margin-top: auto;
+        width: 50%;
         a {
             padding: 1rem;
             display: block;
@@ -205,14 +250,21 @@ main {
         margin: 0 1rem;
         background-color: $palette-yellow;
 
-        h2 {
+        h3 {
             font-family: $secondary-font;
             text-align: center;
-            margin: 0;
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+            margin-top: 0;
 
             @media only screen and (max-width: $breakpoint-small) {
                 font-size: 1.2em;
             }
+        }
+
+        h4 {
+            margin: 0.5rem 0;
+            text-align: center;
         }
 
         p {
@@ -267,125 +319,155 @@ main {
         }
     }
 
-    #cards-1 {
+    #cards-2 {
+        display: flex;
+        flex-flow: row;
+        flex-wrap: wrap;
         &>* {
             display: flex;
             flex-flow: row;
             margin-bottom: 2rem;
-            width: calc(100% - 2rem);
-
-            @media only screen and (max-width: $breakpoint-medium) {
-                margin-bottom: 1rem;
-                flex-flow: column;
-
+            width: calc(50% - 2rem);
+            &:nth-child(4n+3){
+                flex-flow: row-reverse;
             }
-
-            @media only screen and (max-width: $breakpoint-small) {
-                margin-bottom: 1rem;
-                flex-flow: column;
+            &:nth-child(4n+4){
+                flex-flow: row-reverse;
             }
+        }
 
-            .card-text {
-                padding: 2rem;
-                width: calc(50% - 4rem);
+        .card-text {
+            padding: 1rem;
+            width: calc(50% - 2rem);
+            display: flex;
+            flex-flow: column;}
+
+            picture {
+                max-width: 50%;
+            }
+   
+        }
+
+        #cards-1 {
+            &>* {
                 display: flex;
-                flex-flow: column;
+                flex-flow: row;
+                margin-bottom: 2rem;
+                width: calc(100% - 2rem);
 
                 @media only screen and (max-width: $breakpoint-medium) {
-                    padding: 1rem;
-                    width: calc(100% - 2rem);
+                    margin-bottom: 1rem;
+                    flex-flow: column;
+
                 }
 
                 @media only screen and (max-width: $breakpoint-small) {
-                    width: calc(100% - 2rem);
-                }
-
-                button {
-                    align-self: center;
-                    margin-top: auto;
-                }
-
-            }
-
-            picture {
-                min-width: 50%;
-                max-width: 50%;
-
-                @media only screen and (max-width: $breakpoint-medium) {
-                    min-width: 100%;
-                    max-width: 100%;
-                }
-            }
-
-            &:nth-child(even) {
-                flex-flow: row-reverse;
-
-                @media only screen and (max-width: $breakpoint-medium) {
+                    margin-bottom: 1rem;
                     flex-flow: column;
                 }
+
+                .card-text {
+                    padding: 2rem;
+                    width: calc(50% - 4rem);
+                    display: flex;
+                    flex-flow: column;
+
+                    @media only screen and (max-width: $breakpoint-medium) {
+                        padding: 1rem;
+                        width: calc(100% - 2rem);
+                    }
+
+                    @media only screen and (max-width: $breakpoint-small) {
+                        width: calc(100% - 2rem);
+                    }
+
+                    button {
+                        align-self: center;
+                        margin-top: auto;
+                    }
+
+                }
+
+                picture {
+                    min-width: 50%;
+                    max-width: 50%;
+
+                    @media only screen and (max-width: $breakpoint-medium) {
+                        min-width: 100%;
+                        max-width: 100%;
+                    }
+                }
+
+                &:nth-child(even) {
+                    flex-flow: row-reverse;
+
+                    @media only screen and (max-width: $breakpoint-medium) {
+                        flex-flow: column;
+                    }
+                }
             }
         }
     }
-}
 
-footer {
-    background-color: $palette-purple;
-    color: white;
-    width: 100%;
-    text-align: center;
-    padding: 2rem 0;
-    font-family: $body-font;
-
-    .footer-wrapper {
-        width: calc(80% - 2rem);
-        display: flex;
-        flex-flow: row;
-        margin: auto;
-
-        @media only screen and (max-width: $breakpoint-menu) {
-            flex-flow: column;
-        }
-    }
-
-    .footer-row {
-        display: flex;
-        flex-flow: row;
-        justify-content: center;
-        align-content: center;
+    footer {
+        background-color: $palette-purple;
+        color: white;
         width: 100%;
-        padding-bottom: 1rem;
+        text-align: center;
+        padding: 2rem 0;
+        font-family: $body-font;
 
-        a {
+        .footer-wrapper {
+            width: calc(80% - 2rem);
             display: flex;
-            align-items: center;
-        }
+            flex-flow: row;
+            margin: auto;
 
-        img {
-            width: 2.5rem;
-            margin: 0 2rem;
             @media only screen and (max-width: $breakpoint-menu) {
-                margin: 0 1rem;
+                flex-flow: column;
             }
         }
 
-    }
-
-    .footer-inner-column {
-        width: 50%;
-        //padding: 1rem;
-
-        @media only screen and (max-width: $breakpoint-menu) {
+        .footer-row {
+            display: flex;
+            flex-flow: row;
+            justify-content: center;
+            align-content: center;
             width: 100%;
+            padding-bottom: 1rem;
+
+            a {
+                display: flex;
+                align-items: center;
+            }
+
+            img {
+                width: 2.5rem;
+                margin: 0 2rem;
+
+                @media only screen and (max-width: $breakpoint-menu) {
+                    margin: 0 1rem;
+                }
+            }
+
         }
 
-        ul {
-            @include mixins.no-bullets();
-            @include mixins.plain-links(white);
-            line-height: 2rem;
+        .footer-inner-column {
+            width: 50%;
+            //padding: 1rem;
+
+            @media only screen and (max-width: $breakpoint-menu) {
+                width: 100%;
+            }
+
+            ul {
+                @include mixins.no-bullets();
+                @include mixins.plain-links(white);
+                line-height: 2rem;
+            }
+        }
+
+        p {
+            margin: 0;
         }
     }
-
-    p {
-        margin: 0;
-    }
-}

@@ -19,29 +19,148 @@
     <meta name="msapplication-TileColor" content="#00b2af">
     <meta name="msapplication-config" content="icons/browserconfig.xml">
     <meta name="theme-color" content="#3e1052">
-    <title>Jem Zoo</title>
+    <title>Jem Zoo - Things to do</title>
 </head>
 
 <body>
     <header>
-        <h1><a href="index.html">Jem Zoo</a></h1>
-        <nav>
-            <input id="collapsible" class="toggle" type="checkbox">
-            <label for="collapsible" class="toggle">Menu</label>
-            <ul>
-                <li><a href="#">Animals</a></li>
-                <li><a href="#">Things to do</a></li>
-                <li><a href="#">What we do</a></li>
-                <li><a href="#">Tickets</a></li>
-            </ul>
-        </nav>
+        <div class="header-wrapper">
+            <h1><a href="index.html">Jem Zoo</a></h1>
+            <nav>
+                <ul id="menu">
+                    <li><a href="#">Animals</a></li>
+                    <li><a href="things-to-do.html">Things to do</a></li>
+                    <li><a href="under-construction.html">What we do</a></li>
+                    <li><a href="under-construction.html">Tickets</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
+
     <main>
-        <h1>Under construction</h1>
+        <h2></h2>
+        <div id="cards-2">
+            <article>
+                <picture>
+                    <source srcset="https://picsum.photos/500">
+                    <img src="images/giraffe-square.png" alt="A giraffe looks over a fence."></img>
+                </picture>
+                <div class="card-text">
+                    <h3>Zookeeper for a day</h3>
+                    <h4>3rd June 2021</h4>
+                    <h4>Ages 12-18 only</h4>
+                    <p>text</p>
+                    <button><a href="#">Book</a></button>
+                </div>
+            </article>
+            <article>
+                <picture>
+                    <source srcset="images/wine-square-500.webp">
+                    <img src="images/wine-square-fallback.jpg"
+                        alt="A group of people hold wine glasses together."></img>
+                </picture>
+                <div class="card-text">
+                    <h3>Wine Tasting</h3>
+                    <h4>16th July 2021</h4>
+                    <h4>£15 per person - 18+ only</h4>
+                    <p>Enjoy a wine tasting experience surrounded by beautiful scenery in our aquarium.</p>
+                    <button><a href="#">Book</a></button>
+                </div>
+            </article>
+            <article>
+                <picture>
+                    <source srcset="images/camera-square-500.webp">
+                    <img src="images/camera-square-fallback.jpg" alt="A woman points a camera to the upper left."></img>
+                </picture>
+                <div class="card-text">
+                    <h3>Wildlife Photography Taster Class</h3>
+                    <h4>31st July 2022</h4>
+                    <h4>£60 per person - Adults only</h4>
+                    <p>Learn camera techniques and get up close with out animals!</p>
+                    <button><a href="#">Book</a></button>
+                </div>
+            </article>
+            <article>
+                <picture>
+                    <source srcset="images/keeper-square-500.webp">
+                    <img src="images/keeper-square-fallback.jpg" alt="A zookeeper feeds a ring-tailed lemur sat on a branch."></img>
+                </picture>
+                <div class="card-text">
+                    <h3>Q&A With Keepers</h3>
+                    <h4>7th August 2021</h4>
+                    <h4>Suitable for all ages</h4>
+                    <p>Come and ask our friendly zookeepers all about your favourite animals!</p>
+                    <button><a href="#">Book</a></button>
+                </div>
+            </article>
+        </div>
+        <div id="cards-4">
+            <article>
+                <picture>
+                    <source srcset="images/giraffe-square-500.webp">
+                    <img src="images/giraffe-square.png" alt="A giraffe looks over a fence."></img>
+                </picture>
+                <div class="card-text">
+                    <h3>Another date</h3>
+                    <p>i know nothng</p>
+                </div>
+            </article>
+            <article>
+                <picture>
+                    <source srcset="images/easter-square-500.webp">
+                    <img src="images/easter-square-fallback.jpg" alt="A giraffe looks over a fence."></img>
+                </picture>
+                <div class="card-text">
+                    <h3>Easter Extravaganza</h3>
+                    <h4>4th - 20th April 2022</h4>
+                </div>
+            </article>
+            <article>
+                <picture>
+                    <source srcset="images/halloween-square-500.webp">
+                    <img src="images/halloween-square-fallback.jpg" alt="A giraffe looks over a fence."></img>
+                </picture>
+                <div class="card-text">
+                    <h3>Spooky Spectactular</h3>
+                    <h4>24th - 31st October 2022</h4>
+                </div>
+            </article>
+            <article>
+                <picture>
+                    <source srcset="images/christmas-square-500.webp">
+                    <img src="images/christmas-square-fallback.jpg" alt="A giraffe looks over a fence."></img>
+                </picture>
+                <div class="card-text">
+                    <h3>Christmas</h3>
+                    <h4>1st - 31st December 2022</h4>
+                </div>
+            </article>
+        </div>
     </main>
 
     <footer>
-        <p>something here idk</p>
+        <div class="footer-row">
+            <a href="#"><img src="images/facebook.svg" alt="Facebook logo."></img></a>
+            <a href="#"><img src="images/twitter.svg" alt="Twitter logo."></img></a>
+            <a href="#"><img src="images/instagram.svg" alt="Instagram logo."></img></a>
+            <a href="#"><img src="images/youtube.svg" alt="YouTube logo."></img></a>
+        </div>
+        <div class="footer-wrapper">
+            <div class="footer-inner-column">
+                <ul>
+                    <li><a href="#">Contact us</a></li>
+                    <li><a href="#">Press</a></li>
+                    <li><a href="#">Site map</a></li>
+                    <li><a href="#">Careers</a></li>
+                </ul>
+            </div>
+            <div class="footer-inner-column">
+                <ul>
+                    <li><a href="https://fontawesome.com/license">Icons by Font Awesome</a></li>
+                    <li><a href="https://unsplash.com/">Images by Unsplash</a></li>
+                </ul>
+            </div>
+        </div>
     </footer>
 
 </body>
