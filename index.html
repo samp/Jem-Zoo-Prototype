@@ -24,15 +24,19 @@
 
 <body>
     <header>
-        <h1><a href="index.html">Jem Zoo</a></h1>
-        <nav>
-            <ul>
-                <li><a href="#">Animals</a></li>
-                <li><a href="things-to-do.html">Things to do</a></li>
-                <li><a href="under-construction.html">What we do</a></li>
-                <li><a href="under-construction.html">Tickets</a></li>
-            </ul>
-        </nav>
+        <div class="header-wrapper">
+            <h1><a href="index.html">Jem Zoo</a></h1>
+            <input id="collapsible" class="toggle" type="checkbox">
+            <label for="collapsible" class="toggle"><img src="images/hamburger.svg"></img></label>
+            <nav>
+                <ul id="menu">
+                    <li><a href="#">Animals</a></li>
+                    <li><a href="things-to-do.html">Things to do</a></li>
+                    <li><a href="under-construction.html">What we do</a></li>
+                    <li><a href="under-construction.html">Tickets</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
     <div id="hero">
         <picture>
@@ -41,7 +45,7 @@
             <img src="images/leopard-wide-fallback.jpg" alt="A leopard sits on a rock at looks to the right."></img>
         </picture>
         <div class="hero-text">
-            <p>Welcome <br>to Jem Zoo</p>
+            <h2>Welcome <br>to Jem Zoo</h2>
         </div>
     </div>
     <main>
@@ -54,7 +58,7 @@
                     </picture>
 
                     <div class="card-text">
-                        <h2>Animals</h2>
+                        <h3>Animals</h3>
                         <p>We have a large collection of animals from across the globe - click here to meet them!</p>
                     </div>
                 </a>
@@ -69,7 +73,7 @@
                     </picture>
 
                     <div class="card-text">
-                        <h2>Events</h2>
+                        <h3>Events</h3>
                         <p>We have an array of fun events year-round for all members of the family. Click here to see
                             what's coming soon.</p>
                     </div>
@@ -83,7 +87,7 @@
                     </picture>
 
                     <div class="card-text">
-                        <h2>Conservation</h2>
+                        <h3>Conservation</h3>
                         <p>Jem Zoo is committed to providing a safe future for our planet, through research, education,
                             and breeding programs. Click here to to learn more about what we do.</p>
                     </div>
@@ -96,7 +100,7 @@
                         <img src="images/aquarium-square-fallback.jpg" alt="A family view a large aquarium."></img>
                     </picture>
                     <div class="card-text">
-                        <h2>Membership</h2>
+                        <h3>Membership</h3>
                         <p>Membership grants you unlimited entry to the zoo and exclusive behind the scenes info through
                             our Member's Magazine! Click here to learn more about being a member of Jem Zoo.</p>
                     </div>
@@ -114,7 +118,7 @@
                     <img src="images/panda-fallback.jpg" alt="Close up shot of Kenny the red panda"></img>
                 </picture>
                 <div class="card-text">
-                    <h2>Animal Spotlight</h2>
+                    <h3>Animal Spotlight</h3>
                     <p class="headline">Meet our adorable red panda, <strong>Frankie</strong>!</p>
                     <p>Red pandas can live to be 15 years old, and weigh up to 6kg. A red panda's diet is mostly bamboo,
                         with fruit and eggs as a special treat. They are typically
@@ -135,7 +139,7 @@
                     <img src="images/parrots-fallback.jpg" alt="Two blue parrots look to the left."></img>
                 </picture>
                 <div class="card-text">
-                    <h2>Donate</h2>
+                    <h3>Donate</h3>
                     <p>Help us prevent extinction by donating to our zoo and conservation efforts. Your donation allows
                         us to care for our 200+ species, maintain our grounds, and contributes to our conservation
                         program.</p>
@@ -151,7 +155,7 @@
                 </picture>
 
                 <div class="card-text">
-                    <h2>Families</h2>
+                    <h3>Families</h3>
                     <p>Jem Zoo is proud to provide a family friendly environment. All of our pathways are wheelchair and
                         pushchair accessible, and we have a parents' room near the restaurant with microwave and baby
                         changing facilities. Both our cafe and restaurant are well-stocked with high chairs and sell
