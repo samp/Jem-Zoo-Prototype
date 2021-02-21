@@ -334,6 +334,21 @@ main {
             &:nth-child(4n+4){
                 flex-flow: row-reverse;
             }
+            @media only screen and (max-width: $breakpoint-medium) {
+                margin-left: 1rem;
+                margin-right: 1rem;
+                width: calc(100% - 2rem);
+                margin-bottom: 1rem;
+                &:nth-child(4n+3){
+                    flex-flow: row;
+                }
+                &:nth-child(4n+4){
+                    flex-flow: row;
+                }
+                &:nth-child(even){
+                    flex-flow: row-reverse;
+                }
+            }
         }
 
         .card-text {
