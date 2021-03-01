@@ -4,6 +4,8 @@ html {
 
 body {
   width: 100%;
+  background-color: #fff;
+  overflow-x: hidden;
 }
 
 header {
@@ -21,23 +23,105 @@ header a:visited {
   header {
     position: static;
   }
+  html, body {
+    height: 100%;
+    width: 100vw;
+    overflow-x: hidden;
+    position: absolute;
+  }
+
   header label.toggle {
     display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
   }
   header input {
     opacity: 0;
     position: absolute;
+    right: 2rem;
+  }
+  header .toggle:checked {
+    background-color: blue;
+  }
+  header input:checked ~ nav {
+    transform: none;
+    transition: transform 0.5s ease;
+    overflow: hidden;
   }
   header nav {
-    width: 0 !important;
+    position: absolute;
+    z-index: 9999;
+    right: 0;
+    top: 5rem;
+    width: 80% !important;
+    background-color: #3E1052;
+    height: 100vh;
+    align-items: flex-start !important;
+    transform: translate(500px);
+    transition: transform 0.5s ease;
   }
   header nav ul#menu {
     flex-flow: column;
-    position: absolute;
-    width: 14rem;
+    padding-top: 1rem;
   }
   header nav ul#menu li {
     width: 100%;
+  }
+  header nav ul#menu li a {
+    font-size: 1.2rem;
+    padding: 2rem 2rem;
+  }
+}
+@media only screen and (max-width: 450px) {
+  html, body {
+    height: 100%;
+    width: 100vw;
+    overflow-x: hidden;
+    position: absolute;
+  }
+
+  header label.toggle {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+  header input {
+    opacity: 0;
+    position: absolute;
+    right: 2rem;
+  }
+  header .toggle:checked {
+    background-color: blue;
+  }
+  header input:checked ~ nav {
+    transform: none;
+    transition: transform 0.5s ease;
+    overflow: hidden;
+  }
+  header nav {
+    position: absolute;
+    z-index: 9999;
+    right: 0;
+    top: 4rem;
+    width: 80% !important;
+    background-color: #3E1052;
+    height: 100vh;
+    align-items: flex-start !important;
+    transform: translate(500px);
+    transition: transform 0.5s ease;
+  }
+  header nav ul#menu {
+    flex-flow: column;
+    padding-top: 1rem;
+  }
+  header nav ul#menu li {
+    width: 100%;
+  }
+  header nav ul#menu li a {
+    font-size: 1.2rem;
+    padding: 2rem 2rem;
   }
 }
 header img {
@@ -144,6 +228,7 @@ header nav ul a {
 
 #hero {
   position: relative;
+  z-index: 998;
 }
 #hero .hero-text {
   position: absolute;

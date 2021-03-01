@@ -16,10 +16,14 @@ sans-serif;
 
 // Colour scheme
 $palette-purple: #3E1052;
+//$palette-green: #00704A;
 $palette-green: #00704A;
 $palette-teal: #00B2AF;
 $palette-yellow: #FFD747;
+//$palette-yellow: #FFf;
 $palette-orange: #F47736;
+//$background-color: #ebdfe6;
+$background-color: #fff;
 
 // Breakpoints
 $breakpoint-wide: 1200px;
@@ -39,6 +43,8 @@ html {
 
 body {
     width: 100%;
+    background-color: $background-color;
+    overflow-x: hidden;
 }
 
 // Header section
@@ -49,7 +55,11 @@ header {
         position: static;
         //padding-bottom: 1rem;
         //@include mixins.icon-menu($nav-icons);
-        @include mixins.collapsing-menu();
+        @include mixins.collapsing-menu(5rem);
+    }
+
+    @media only screen and (max-width: $breakpoint-small) {
+        @include mixins.collapsing-menu(4rem);
     }
 
     color: white;
@@ -152,6 +162,7 @@ header {
 // Hero image
 #hero {
     position: relative;
+    z-index: 998;
 
     .hero-text {
         position: absolute;
