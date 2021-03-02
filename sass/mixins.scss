@@ -52,7 +52,7 @@
                 display: inline-block;
                 background-repeat: no-repeat;
                 background-position: center;
-                //padding-bottom: 1rem !important;
+                //padding-bottom: 1rem ;
                 height: 2rem;
                 width: 100%;
                 padding: 0.5rem;
@@ -62,48 +62,45 @@
     }
 }
 
-@mixin collapsing-menu($navbar-height) {
+@mixin collapsing-menu($navbar-height, $background-color) {
+    position: static;
+
     @at-root {
-        html, body {
+
+        html,
+        body {
             height: 100%;
             width: 100vw;
             overflow-x: hidden;
-            position:absolute;
+            position: absolute;
         }
 
     }
+
+    .header-wrapper {
+        flex-flow: row ;
+        align-items: center ;
+    }
+
+    h1 {
+        padding: 1rem 2rem ;
+    }
+
+    img {
+        display: block ;
+    }
+
     label.toggle {
         display: block;
         position: absolute;
         top: 0;
         right: 0;
-
-        //padding-top: 1rem;
-    }
-
-    input {
-        opacity: 0;
-        position: absolute;
-        right:2rem;
-    }
-
-    .toggle:checked {
-        //max-height: 100%;
-        background-color: blue;
     }
 
     input:checked~nav {
-        transform:none;
-        //background-color: blue;
+        transform: none;
         transition: transform 0.5s ease;
-        //padding-bottom: 1rem;
         overflow: hidden;
-        @at-root {
-            html, body {
-                //overflow: hidden;
-            }
-
-        }
     }
 
     nav {
@@ -111,13 +108,12 @@
         z-index: 9999;
         right: 0;
         top: $navbar-height;
-        width: 80% !important;
-        background-color: #3E1052;
+        width: 80% ;
+        background-color: $background-color;
         height: 100vh;
-        align-items: flex-start !important;
-        transform:translate(500px);
+        align-items: flex-start ;
+        transform: translate(500px);
         transition: transform 0.5s ease;
-
 
         ul#menu {
             flex-flow: column;
@@ -125,7 +121,7 @@
 
             li {
                 width: 100%;
-                
+
                 a {
                     font-size: 1.2rem;
                     padding: 2rem 2rem;
@@ -136,6 +132,8 @@
 
     }
 }
+
+@mixin nav-bar() {}
 
 @mixin card-column() {
     display: flex;

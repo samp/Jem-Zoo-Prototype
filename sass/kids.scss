@@ -1,0 +1,128 @@
+$background-image: "../images/topography.svg";
+$palette-pink: #EC4899;
+$palette-bright-green: #00704A;
+
+@use "mixins.scss";
+
+// Font Families
+$main-font: "Chelsea Market",
+Arial,
+Helvetica,
+sans-serif;
+$secondary-font: "Montserrat",
+Arial,
+Helvetica,
+sans-serif;
+$body-font: "Open Sans",
+Arial,
+Helvetica,
+sans-serif;
+
+// Colour scheme
+$palette-purple: #3E1052;
+//$palette-green: #00704A;
+$palette-green: #00704A;
+$palette-teal: #00B2AF;
+$palette-yellow: #FFD747;
+//$palette-yellow: #FFf;
+$palette-orange: #F47736;
+//$background-color: #ebdfe6;
+$background-color: #fff;
+
+// Breakpoints
+$breakpoint-xl: 2000px;
+$breakpoint-wide: 1200px;
+$breakpoint-medium: 900px;
+$breakpoint-menu: 600px; // Breakpoint for menu collapsing
+$breakpoint-small: 450px;
+
+body {
+    background-image: url($background-image);
+    background-size: 900px;
+}
+
+main {
+    width: 100%;
+    margin: 1rem auto 0;
+    max-width: 2000px;
+}
+
+#kids-hero {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 2rem;
+    grid-row-gap: 2rem;
+    margin: 0 1rem 1rem;
+
+    h3 {
+        font-size: 2.1vw;
+    }
+
+    article:nth-of-type(1) {
+        grid-column: 1 / span 2;
+        grid-row: 1 / span 2;
+        background-color: $palette-bright-green;
+        color: white;
+    }
+
+    picture {
+        width: calc(100% - 2rem);
+        margin: 1rem;
+    }
+
+    article:nth-of-type(even) {
+        border-radius: 50%;
+
+        img {
+            border-radius: 50%;
+        }
+    }
+
+
+    article:nth-of-type(3n+2) {
+        background-color: $palette-pink;
+        color: white;
+    }
+
+    article:nth-of-type(3n+4) {
+        background-color: $palette-teal;
+        color: white;
+    }
+
+    article {
+        aspect-ratio: 1 / 1;
+        margin: 0;
+    }
+
+    .card-text {
+        padding: 1rem;
+    }
+
+    #kids-hero-main {
+        img {
+            border-radius: 20px;
+        }
+    }
+
+    @media only screen and (min-width: $breakpoint-xl) {
+        h3 {
+            font-size: 3rem;
+        }
+    }
+
+    @media only screen and (max-width: $breakpoint-medium) {
+        height: 2rem;
+    }
+}
+
+article {
+    border-radius: 25px;
+    overflow: hidden;
+    width: 100%;
+
+    picture {
+        width: calc(50% + 4rem);
+        margin: 1rem;
+    }
+}

@@ -19,120 +19,15 @@ header a:visited {
   text-decoration: none;
   color: white;
 }
-@media only screen and (max-width: 600px) {
-  header {
-    position: static;
-  }
-  html, body {
-    height: 100%;
-    width: 100vw;
-    overflow-x: hidden;
-    position: absolute;
-  }
-
-  header label.toggle {
-    display: block;
-    position: absolute;
-    top: 0;
-    right: 0;
-  }
-  header input {
-    opacity: 0;
-    position: absolute;
-    right: 2rem;
-  }
-  header .toggle:checked {
-    background-color: blue;
-  }
-  header input:checked ~ nav {
-    transform: none;
-    transition: transform 0.5s ease;
-    overflow: hidden;
-  }
-  header nav {
-    position: absolute;
-    z-index: 9999;
-    right: 0;
-    top: 5rem;
-    width: 80% !important;
-    background-color: #3E1052;
-    height: 100vh;
-    align-items: flex-start !important;
-    transform: translate(500px);
-    transition: transform 0.5s ease;
-  }
-  header nav ul#menu {
-    flex-flow: column;
-    padding-top: 1rem;
-  }
-  header nav ul#menu li {
-    width: 100%;
-  }
-  header nav ul#menu li a {
-    font-size: 1.2rem;
-    padding: 2rem 2rem;
-  }
-}
-@media only screen and (max-width: 450px) {
-  html, body {
-    height: 100%;
-    width: 100vw;
-    overflow-x: hidden;
-    position: absolute;
-  }
-
-  header label.toggle {
-    display: block;
-    position: absolute;
-    top: 0;
-    right: 0;
-  }
-  header input {
-    opacity: 0;
-    position: absolute;
-    right: 2rem;
-  }
-  header .toggle:checked {
-    background-color: blue;
-  }
-  header input:checked ~ nav {
-    transform: none;
-    transition: transform 0.5s ease;
-    overflow: hidden;
-  }
-  header nav {
-    position: absolute;
-    z-index: 9999;
-    right: 0;
-    top: 4rem;
-    width: 80% !important;
-    background-color: #3E1052;
-    height: 100vh;
-    align-items: flex-start !important;
-    transform: translate(500px);
-    transition: transform 0.5s ease;
-  }
-  header nav ul#menu {
-    flex-flow: column;
-    padding-top: 1rem;
-  }
-  header nav ul#menu li {
-    width: 100%;
-  }
-  header nav ul#menu li a {
-    font-size: 1.2rem;
-    padding: 2rem 2rem;
-  }
+header input {
+  opacity: 0;
+  position: absolute;
+  right: 2rem;
 }
 header img {
   display: none;
   height: 3rem;
   padding: 1rem 2rem;
-}
-@media only screen and (max-width: 600px) {
-  header img {
-    display: block;
-  }
 }
 @media only screen and (max-width: 450px) {
   header img {
@@ -144,11 +39,6 @@ header h1 {
   margin: 0;
   font-size: 3rem;
   padding: 1rem 0;
-}
-@media only screen and (max-width: 600px) {
-  header h1 {
-    padding: 1rem 2rem;
-  }
 }
 @media only screen and (max-width: 450px) {
   header h1 {
@@ -173,12 +63,6 @@ header .header-wrapper {
     flex-flow: column;
     width: 100%;
     height: 100%;
-  }
-}
-@media only screen and (max-width: 600px) {
-  header .header-wrapper {
-    flex-flow: row;
-    align-items: center;
   }
 }
 header nav {
@@ -224,6 +108,120 @@ header nav ul a {
   display: block;
   padding: 1rem 2rem;
   width: 100%;
+}
+@media only screen and (max-width: 450px) {
+  header {
+    position: static;
+  }
+  html,
+body {
+    height: 100%;
+    width: 100vw;
+    overflow-x: hidden;
+    position: absolute;
+  }
+
+  header .header-wrapper {
+    flex-flow: row;
+    align-items: center;
+  }
+  header h1 {
+    padding: 1rem 2rem;
+  }
+  header img {
+    display: block;
+  }
+  header label.toggle {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+  header input:checked ~ nav {
+    transform: none;
+    transition: transform 0.5s ease;
+    overflow: hidden;
+  }
+  header nav {
+    position: absolute;
+    z-index: 9999;
+    right: 0;
+    top: 4rem;
+    width: 80%;
+    background-color: #3E1052;
+    height: 100vh;
+    align-items: flex-start;
+    transform: translate(500px);
+    transition: transform 0.5s ease;
+  }
+  header nav ul#menu {
+    flex-flow: column;
+    padding-top: 1rem;
+  }
+  header nav ul#menu li {
+    width: 100%;
+  }
+  header nav ul#menu li a {
+    font-size: 1.2rem;
+    padding: 2rem 2rem;
+  }
+}
+@media only screen and (max-width: 600px) {
+  header {
+    position: static;
+  }
+  html,
+body {
+    height: 100%;
+    width: 100vw;
+    overflow-x: hidden;
+    position: absolute;
+  }
+
+  header .header-wrapper {
+    flex-flow: row;
+    align-items: center;
+  }
+  header h1 {
+    padding: 1rem 2rem;
+  }
+  header img {
+    display: block;
+  }
+  header label.toggle {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+  header input:checked ~ nav {
+    transform: none;
+    transition: transform 0.5s ease;
+    overflow: hidden;
+  }
+  header nav {
+    position: absolute;
+    z-index: 9999;
+    right: 0;
+    top: 5rem;
+    width: 80%;
+    background-color: #3E1052;
+    height: 100vh;
+    align-items: flex-start;
+    transform: translate(500px);
+    transition: transform 0.5s ease;
+  }
+  header nav ul#menu {
+    flex-flow: column;
+    padding-top: 1rem;
+  }
+  header nav ul#menu li {
+    width: 100%;
+  }
+  header nav ul#menu li a {
+    font-size: 1.2rem;
+    padding: 2rem 2rem;
+  }
 }
 
 #hero {
