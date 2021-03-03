@@ -17,8 +17,38 @@ main {
   grid-row-gap: 2rem;
   margin: 0 1rem 1rem;
 }
+#kids-hero a,
+#kids-hero a:visited {
+  text-decoration: none;
+  color: white;
+}
+#kids-hero .hero-text {
+  text-align: right;
+  position: absolute;
+  left: 23%;
+  right: 0;
+  top: 16vw;
+  margin: 0;
+  font-family: "Montserrat", Arial, Helvetica, sans-serif;
+  color: white;
+  font-size: 2rem;
+  width: 10%;
+}
+#kids-hero .hero-text h2 {
+  font-size: 3vw;
+}
 #kids-hero h3 {
   font-size: 2.1vw;
+}
+#kids-hero .card-text {
+  height: calc(100% - 2rem);
+}
+#kids-hero p {
+  text-align: center;
+  font-size: 1.5vw;
+  display: block;
+  flex-basis: auto;
+  margin: 0.5rem 0;
 }
 #kids-hero article:nth-of-type(1) {
   grid-column: 1/span 2;
@@ -47,9 +77,30 @@ main {
 #kids-hero article {
   aspect-ratio: 1/1;
   margin: 0;
+  /* From https://ianlunn.github.io/Hover/ */
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+}
+#kids-hero article:hover, #kids-hero article:focus, #kids-hero article:active {
+  -webkit-transform: scale(1.1) rotate(4deg);
+  transform: scale(1.1) rotate(4deg);
+  box-shadow: 0 10px 10px -10px rgba(0, 0, 0, 0.5);
 }
 #kids-hero .card-text {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
   padding: 1rem;
+}
+#kids-hero #kids-hero-main {
+  z-index: 999;
 }
 #kids-hero #kids-hero-main img {
   border-radius: 20px;
@@ -57,6 +108,9 @@ main {
 @media only screen and (min-width: 2000px) {
   #kids-hero h3 {
     font-size: 3rem;
+  }
+  #kids-hero p {
+    font-size: 2rem;
   }
 }
 @media only screen and (max-width: 900px) {

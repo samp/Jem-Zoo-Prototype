@@ -48,6 +48,7 @@ main {
 }
 
 #kids-hero {
+    @include mixins.plain-links(white);
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: repeat(2, 1fr);
@@ -55,8 +56,35 @@ main {
     grid-row-gap: 2rem;
     margin: 0 1rem 1rem;
 
+    .hero-text{
+        text-align: right;
+        position: absolute;
+        left: 23%;
+        right: 0;
+        top: 16vw;
+        margin: 0;
+        font-family: $secondary-font;
+        color: white;
+        font-size: 2rem;
+        width: 10%;
+        h2{
+            font-size: 3vw;
+        }
+    }
+
     h3 {
         font-size: 2.1vw;
+    }
+    .card-text{
+        height: calc(100% - 2rem);
+    }
+
+    p{
+        text-align: center;
+        font-size: 1.5vw;
+        display: block;
+        flex-basis: auto;
+        margin: 0.5rem 0;
     }
 
     article:nth-of-type(1) {
@@ -93,13 +121,18 @@ main {
     article {
         aspect-ratio: 1 / 1;
         margin: 0;
+        @include mixins.grow-rotate;
     }
 
     .card-text {
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
         padding: 1rem;
     }
 
     #kids-hero-main {
+        z-index: 999;
         img {
             border-radius: 20px;
         }
@@ -108,6 +141,9 @@ main {
     @media only screen and (min-width: $breakpoint-xl) {
         h3 {
             font-size: 3rem;
+        }
+        p{
+            font-size: 2rem;
         }
     }
 
