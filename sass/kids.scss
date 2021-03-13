@@ -56,18 +56,19 @@ main {
     grid-row-gap: 2rem;
     margin: 0 1rem 1rem;
 
-    .hero-text{
+    .hero-text {
         text-align: right;
         position: absolute;
-        left: 23%;
+        left: 50%;
         right: 0;
-        top: 16vw;
+        top: 14vw;
         margin: 0;
         font-family: $secondary-font;
         color: white;
         font-size: 2rem;
-        width: 10%;
-        h2{
+        width: 40%;
+
+        h2 {
             font-size: 3vw;
         }
     }
@@ -75,11 +76,12 @@ main {
     h3 {
         font-size: 2.1vw;
     }
-    .card-text{
+
+    .card-text {
         height: calc(100% - 2rem);
     }
 
-    p{
+    p {
         text-align: center;
         font-size: 1.5vw;
         display: block;
@@ -87,7 +89,7 @@ main {
         margin: 0.5rem 0;
     }
 
-    article:nth-of-type(1) {
+    .kids-hero-card:nth-of-type(1) {
         grid-column: 1 / span 2;
         grid-row: 1 / span 2;
         background-color: $palette-bright-green;
@@ -99,7 +101,7 @@ main {
         margin: 1rem;
     }
 
-    article:nth-of-type(even) {
+    .kids-hero-card:nth-of-type(even) {
         border-radius: 50%;
 
         img {
@@ -108,17 +110,26 @@ main {
     }
 
 
-    article:nth-of-type(3n+2) {
+    .kids-hero-card:nth-of-type(3n+2) {
         background-color: $palette-pink;
         color: white;
     }
 
-    article:nth-of-type(3n+4) {
+    .kids-hero-card:nth-of-type(3n+3) {
+        background-color: $palette-yellow;
+
+        a {
+            color: black;
+        }
+
+    }
+
+    .kids-hero-card:nth-of-type(3n+4) {
         background-color: $palette-teal;
         color: white;
     }
 
-    article {
+    .kids-hero-card {
         aspect-ratio: 1 / 1;
         margin: 0;
         @include mixins.grow-rotate;
@@ -133,16 +144,14 @@ main {
 
     #kids-hero-main {
         z-index: 999;
-        img {
-            border-radius: 20px;
-        }
     }
 
     @media only screen and (min-width: $breakpoint-xl) {
         h3 {
             font-size: 3rem;
         }
-        p{
+
+        p {
             font-size: 2rem;
         }
     }
@@ -152,7 +161,7 @@ main {
     }
 }
 
-article {
+.card {
     border-radius: 25px;
     overflow: hidden;
     width: 100%;
@@ -160,5 +169,9 @@ article {
     picture {
         width: calc(50% + 4rem);
         margin: 1rem;
+        
+    }
+    img{
+        border-radius: 20px;
     }
 }

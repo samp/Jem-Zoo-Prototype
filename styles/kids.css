@@ -25,14 +25,14 @@ main {
 #kids-hero .hero-text {
   text-align: right;
   position: absolute;
-  left: 23%;
+  left: 50%;
   right: 0;
-  top: 16vw;
+  top: 14vw;
   margin: 0;
   font-family: "Montserrat", Arial, Helvetica, sans-serif;
   color: white;
   font-size: 2rem;
-  width: 10%;
+  width: 40%;
 }
 #kids-hero .hero-text h2 {
   font-size: 3vw;
@@ -50,7 +50,7 @@ main {
   flex-basis: auto;
   margin: 0.5rem 0;
 }
-#kids-hero article:nth-of-type(1) {
+#kids-hero .kids-hero-card:nth-of-type(1) {
   grid-column: 1/span 2;
   grid-row: 1/span 2;
   background-color: #00704A;
@@ -60,21 +60,27 @@ main {
   width: calc(100% - 2rem);
   margin: 1rem;
 }
-#kids-hero article:nth-of-type(even) {
+#kids-hero .kids-hero-card:nth-of-type(even) {
   border-radius: 50%;
 }
-#kids-hero article:nth-of-type(even) img {
+#kids-hero .kids-hero-card:nth-of-type(even) img {
   border-radius: 50%;
 }
-#kids-hero article:nth-of-type(3n+2) {
+#kids-hero .kids-hero-card:nth-of-type(3n+2) {
   background-color: #EC4899;
   color: white;
 }
-#kids-hero article:nth-of-type(3n+4) {
+#kids-hero .kids-hero-card:nth-of-type(3n+3) {
+  background-color: #FFD747;
+}
+#kids-hero .kids-hero-card:nth-of-type(3n+3) a {
+  color: black;
+}
+#kids-hero .kids-hero-card:nth-of-type(3n+4) {
   background-color: #00B2AF;
   color: white;
 }
-#kids-hero article {
+#kids-hero .kids-hero-card {
   aspect-ratio: 1/1;
   margin: 0;
   /* From https://ianlunn.github.io/Hover/ */
@@ -88,7 +94,7 @@ main {
   -webkit-transition-property: transform;
   transition-property: transform;
 }
-#kids-hero article:hover, #kids-hero article:focus, #kids-hero article:active {
+#kids-hero .kids-hero-card:hover, #kids-hero .kids-hero-card:focus, #kids-hero .kids-hero-card:active {
   -webkit-transform: scale(1.1) rotate(4deg);
   transform: scale(1.1) rotate(4deg);
   box-shadow: 0 10px 10px -10px rgba(0, 0, 0, 0.5);
@@ -101,9 +107,6 @@ main {
 }
 #kids-hero #kids-hero-main {
   z-index: 999;
-}
-#kids-hero #kids-hero-main img {
-  border-radius: 20px;
 }
 @media only screen and (min-width: 2000px) {
   #kids-hero h3 {
@@ -119,14 +122,17 @@ main {
   }
 }
 
-article {
+.card {
   border-radius: 25px;
   overflow: hidden;
   width: 100%;
 }
-article picture {
+.card picture {
   width: calc(50% + 4rem);
   margin: 1rem;
+}
+.card img {
+  border-radius: 20px;
 }
 
 /*# sourceMappingURL=kids.css.map */

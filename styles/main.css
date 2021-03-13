@@ -8,6 +8,23 @@ body {
   overflow-x: hidden;
 }
 
+h3 {
+  font-family: "Montserrat", Arial, Helvetica, sans-serif;
+  text-align: center;
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  margin-top: 0;
+}
+
+h4 {
+  margin: 0.5rem 0;
+  text-align: center;
+}
+
+img {
+  width: 100%;
+}
+
 header {
   color: white;
   width: 100%;
@@ -232,40 +249,18 @@ body {
   position: absolute;
   left: 0;
   right: 0;
-  bottom: 35%;
+  bottom: 7vw;
   margin: 0 auto;
   font-family: "Montserrat", Arial, Helvetica, sans-serif;
   color: #3E1052;
-  font-size: 2rem;
+  font-size: 3vw;
   width: calc(80% - 2rem);
-}
-@media only screen and (max-width: 1200px) {
-  #hero .hero-text {
-    bottom: 27%;
-  }
-}
-@media only screen and (max-width: 900px) {
-  #hero .hero-text {
-    font-size: 1.8rem;
-    bottom: 20%;
-  }
 }
 @media only screen and (max-width: 600px) {
   #hero .hero-text {
-    bottom: 15%;
+    font-size: 6vw;
+    bottom: 10vw;
   }
-}
-@media only screen and (max-width: 450px) {
-  #hero .hero-text {
-    font-size: 1.5rem;
-    bottom: 15%;
-  }
-}
-#hero .hero-text > * {
-  width: 18rem;
-}
-#hero img {
-  width: 100%;
 }
 
 main {
@@ -288,9 +283,6 @@ main button:hover {
     width: 100%;
   }
 }
-main .card-text {
-  line-height: 1.3;
-}
 main .headline {
   font-size: 1.2em;
   text-align: center;
@@ -298,12 +290,6 @@ main .headline {
 main picture,
 main img {
   display: block;
-}
-main img {
-  width: 100%;
-}
-main p {
-  line-height: 1.3;
 }
 main button {
   background-color: #00704A;
@@ -323,30 +309,10 @@ main button a {
   padding: 1rem;
   display: block;
 }
-main article {
+main .card {
   margin: 0 1rem;
   background-color: #FFD747;
-}
-main article h3 {
-  font-family: "Montserrat", Arial, Helvetica, sans-serif;
-  text-align: center;
-  font-size: 1.5rem;
-  margin-bottom: 0.5rem;
-  margin-top: 0;
-}
-@media only screen and (max-width: 450px) {
-  main article h3 {
-    font-size: 1.2em;
-  }
-}
-main article h4 {
-  margin: 0.5rem 0;
-  text-align: center;
-}
-@media only screen and (max-width: 450px) {
-  main article p {
-    font-size: 0.8em;
-  }
+  line-height: 1.3;
 }
 main #cards-4 {
   display: flex;
@@ -371,18 +337,12 @@ main #cards-4 a > *:hover {
     flex-flow: column;
   }
 }
-main #cards-4 a {
-  display: flex;
-  flex-flow: column;
-  height: 100%;
-  flex-grow: 1;
-}
-main #cards-4 > * {
+main #cards-4 .card {
   max-width: calc(25% - 2rem);
   margin-bottom: 2rem;
 }
 @media only screen and (max-width: 900px) {
-  main #cards-4 > * {
+  main #cards-4 .card {
     margin-left: 1rem;
     margin-right: 0;
     max-width: calc(50% - 1.5rem);
@@ -390,11 +350,17 @@ main #cards-4 > * {
   }
 }
 @media only screen and (max-width: 450px) {
-  main #cards-4 > * {
+  main #cards-4 .card {
     display: flex;
     flex-flow: row;
     min-width: calc(100% - 2rem);
   }
+}
+main #cards-4 .card-wrapper {
+  display: flex;
+  flex-flow: column;
+  height: 100%;
+  flex-grow: 1;
 }
 main #cards-4 .card-text {
   flex-grow: 1;
@@ -405,32 +371,26 @@ main #cards-2 {
   flex-flow: row;
   flex-wrap: wrap;
 }
-main #cards-2 > * {
+main #cards-2 .card {
   display: flex;
   flex-flow: row;
   margin-bottom: 2rem;
   width: calc(50% - 2rem);
 }
-main #cards-2 > *:nth-child(4n+3) {
-  flex-flow: row-reverse;
-}
-main #cards-2 > *:nth-child(4n+4) {
+main #cards-2 .card:nth-child(4n+3), main #cards-2 .card:nth-child(4n+4) {
   flex-flow: row-reverse;
 }
 @media only screen and (max-width: 900px) {
-  main #cards-2 > * {
+  main #cards-2 .card {
     margin-left: 1rem;
     margin-right: 1rem;
     width: calc(100% - 2rem);
     margin-bottom: 1rem;
   }
-  main #cards-2 > *:nth-child(4n+3) {
+  main #cards-2 .card:nth-child(4n+3), main #cards-2 .card:nth-child(4n+4) {
     flex-flow: row;
   }
-  main #cards-2 > *:nth-child(4n+4) {
-    flex-flow: row;
-  }
-  main #cards-2 > *:nth-child(even) {
+  main #cards-2 .card:nth-child(even) {
     flex-flow: row-reverse;
   }
 }
@@ -441,64 +401,59 @@ main #cards-2 .card-text {
   flex-flow: column;
 }
 main #cards-2 picture {
-  max-width: 50%;
+  width: 50%;
 }
-main #cards-1 > * {
+main #cards-2 img {
+  height: 100%;
+  object-fit: cover;
+}
+main #cards-1 .card {
   display: flex;
   flex-flow: row;
   margin-bottom: 2rem;
   width: calc(100% - 2rem);
 }
 @media only screen and (max-width: 900px) {
-  main #cards-1 > * {
+  main #cards-1 .card {
     margin-bottom: 1rem;
     flex-flow: column;
   }
 }
-@media only screen and (max-width: 450px) {
-  main #cards-1 > * {
-    margin-bottom: 1rem;
-    flex-flow: column;
-  }
-}
-main #cards-1 > * .card-text {
+main #cards-1 .card-text {
   padding: 2rem;
   width: calc(50% - 4rem);
   display: flex;
   flex-flow: column;
 }
 @media only screen and (max-width: 900px) {
-  main #cards-1 > * .card-text {
+  main #cards-1 .card-text {
     padding: 1rem;
     width: calc(100% - 2rem);
   }
 }
-@media only screen and (max-width: 450px) {
-  main #cards-1 > * .card-text {
-    width: calc(100% - 2rem);
-  }
-}
-main #cards-1 > * .card-text button {
+main #cards-1 .card-text button {
   align-self: center;
   margin-top: auto;
 }
-main #cards-1 > * picture {
-  min-width: 50%;
-  max-width: 50%;
+main #cards-1 picture {
+  width: 50%;
 }
 @media only screen and (max-width: 900px) {
-  main #cards-1 > * picture {
-    min-width: 100%;
-    max-width: 100%;
+  main #cards-1 picture {
+    width: 100%;
   }
 }
-main #cards-1 > *:nth-child(even) {
+main #cards-1 .card:nth-of-type(even) {
   flex-flow: row-reverse;
 }
 @media only screen and (max-width: 900px) {
-  main #cards-1 > *:nth-child(even) {
+  main #cards-1 .card:nth-of-type(even) {
     flex-flow: column;
   }
+}
+main #cards-1 img {
+  height: 100%;
+  object-fit: cover;
 }
 
 footer {
@@ -541,27 +496,22 @@ footer .footer-row img {
     margin: 0 1rem;
   }
 }
-footer .footer-inner-column {
-  width: 50%;
-}
-@media only screen and (max-width: 600px) {
-  footer .footer-inner-column {
-    width: 100%;
-  }
-}
-footer .footer-inner-column ul {
+footer .footer-column {
   list-style-type: none;
   padding: 0;
   margin: 0;
   line-height: 2rem;
+  width: 50%;
 }
-footer .footer-inner-column ul a,
-footer .footer-inner-column ul a:visited {
+footer .footer-column a,
+footer .footer-column a:visited {
   text-decoration: none;
   color: white;
 }
-footer p {
-  margin: 0;
+@media only screen and (max-width: 600px) {
+  footer .footer-column {
+    width: 100%;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */
