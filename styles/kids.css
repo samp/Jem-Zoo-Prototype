@@ -2,6 +2,11 @@ body {
   background-image: url("../images/topography.svg");
   background-size: 900px;
 }
+body h2, body h3 {
+  font-family: "Londrina Solid", cursive;
+  letter-spacing: 3px;
+  font-weight: 300;
+}
 
 main {
   width: 100%;
@@ -27,9 +32,9 @@ main {
   position: absolute;
   left: 50%;
   right: 0;
-  top: 14vw;
+  bottom: 2vw;
   margin: 0;
-  font-family: "Montserrat", Arial, Helvetica, sans-serif;
+  font-family: "Londrina Solid", cursive;
   color: white;
   font-size: 2rem;
   width: 40%;
@@ -126,10 +131,14 @@ main {
   border-radius: 25px;
   overflow: hidden;
   width: 100%;
+  font-size: 1.3rem;
+}
+.card h3 {
+  font-size: 3rem;
 }
 .card picture {
   width: calc(50% + 4rem);
-  margin: 1rem;
+  margin: 1rem 0 1rem 1rem;
 }
 .card img {
   border-radius: 20px;

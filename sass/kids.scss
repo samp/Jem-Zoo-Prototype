@@ -9,10 +9,8 @@ $main-font: "Chelsea Market",
 Arial,
 Helvetica,
 sans-serif;
-$secondary-font: "Montserrat",
-Arial,
-Helvetica,
-sans-serif;
+$secondary-font: 'Londrina Solid', 
+cursive;
 $body-font: "Open Sans",
 Arial,
 Helvetica,
@@ -39,6 +37,11 @@ $breakpoint-small: 450px;
 body {
     background-image: url($background-image);
     background-size: 900px;
+    h2, h3{
+        font-family: $secondary-font;
+        letter-spacing: 3px;
+        font-weight: 300;
+    }
 }
 
 main {
@@ -61,7 +64,7 @@ main {
         position: absolute;
         left: 50%;
         right: 0;
-        top: 14vw;
+        bottom: 2vw;
         margin: 0;
         font-family: $secondary-font;
         color: white;
@@ -165,10 +168,15 @@ main {
     border-radius: 25px;
     overflow: hidden;
     width: 100%;
+    font-size: 1.3rem;
+
+    h3{
+        font-size: 3rem;
+    }
 
     picture {
         width: calc(50% + 4rem);
-        margin: 1rem;
+        margin: 1rem 0 1rem 1rem;
         
     }
     img{
