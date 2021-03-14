@@ -9,7 +9,7 @@ $main-font: "Chelsea Market",
 Arial,
 Helvetica,
 sans-serif;
-$secondary-font: 'Londrina Solid', 
+$secondary-font: 'Londrina Solid',
 cursive;
 $body-font: "Open Sans",
 Arial,
@@ -37,7 +37,9 @@ $breakpoint-small: 450px;
 body {
     background-image: url($background-image);
     background-size: 900px;
-    h2, h3{
+
+    h2,
+    h3 {
         font-family: $secondary-font;
         letter-spacing: 3px;
         font-weight: 300;
@@ -135,6 +137,9 @@ main {
     .kids-hero-card {
         aspect-ratio: 1 / 1;
         margin: 0;
+    }
+
+    .grow-rotate {
         @include mixins.grow-rotate;
     }
 
@@ -147,6 +152,8 @@ main {
 
     #kids-hero-main {
         z-index: 999;
+        transform: perspective(1px) translateZ(0);
+
     }
 
     @media only screen and (min-width: $breakpoint-xl) {
@@ -170,16 +177,17 @@ main {
     width: 100%;
     font-size: 1.3rem;
 
-    h3{
+    h3 {
         font-size: 3rem;
     }
 
     picture {
         width: calc(50% + 4rem);
-        margin: 1rem 0 1rem 1rem;
-        
+        margin: 1rem;
+
     }
-    img{
+
+    img {
         border-radius: 20px;
     }
 }

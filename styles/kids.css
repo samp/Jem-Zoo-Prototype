@@ -2,7 +2,8 @@ body {
   background-image: url("../images/topography.svg");
   background-size: 900px;
 }
-body h2, body h3 {
+body h2,
+body h3 {
   font-family: "Londrina Solid", cursive;
   letter-spacing: 3px;
   font-weight: 300;
@@ -88,6 +89,8 @@ main {
 #kids-hero .kids-hero-card {
   aspect-ratio: 1/1;
   margin: 0;
+}
+#kids-hero .grow-rotate {
   /* From https://ianlunn.github.io/Hover/ */
   display: inline-block;
   vertical-align: middle;
@@ -99,7 +102,7 @@ main {
   -webkit-transition-property: transform;
   transition-property: transform;
 }
-#kids-hero .kids-hero-card:hover, #kids-hero .kids-hero-card:focus, #kids-hero .kids-hero-card:active {
+#kids-hero .grow-rotate:hover, #kids-hero .grow-rotate:focus, #kids-hero .grow-rotate:active {
   -webkit-transform: scale(1.1) rotate(4deg);
   transform: scale(1.1) rotate(4deg);
   box-shadow: 0 10px 10px -10px rgba(0, 0, 0, 0.5);
@@ -112,6 +115,7 @@ main {
 }
 #kids-hero #kids-hero-main {
   z-index: 999;
+  transform: perspective(1px) translateZ(0);
 }
 @media only screen and (min-width: 2000px) {
   #kids-hero h3 {
@@ -138,7 +142,7 @@ main {
 }
 .card picture {
   width: calc(50% + 4rem);
-  margin: 1rem 0 1rem 1rem;
+  margin: 1rem;
 }
 .card img {
   border-radius: 20px;
