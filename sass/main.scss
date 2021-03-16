@@ -294,8 +294,18 @@ main {
             margin-bottom: 2rem;
             width: calc(50% - 2rem);
 
-            &:nth-child(4n+3), &:nth-child(4n+4) {
-                flex-flow: row-reverse;
+            @media only screen and (min-width: $breakpoint-wide) {
+
+                &:nth-child(4n+3),
+                &:nth-child(4n+4) {
+                    flex-flow: row-reverse;
+                }
+            }
+
+
+            @media only screen and (max-width: $breakpoint-wide) {
+                flex-flow: column;
+
             }
 
             @media only screen and (max-width: $breakpoint-medium) {
@@ -304,14 +314,26 @@ main {
                 width: calc(100% - 2rem);
                 margin-bottom: 1rem;
 
-                &:nth-child(4n+3), &:nth-child(4n+4) {
-                    flex-flow: row;
-                }
-
                 &:nth-child(even) {
                     flex-flow: row-reverse;
                 }
+
+                &:nth-child(odd) {
+                    flex-flow: row;
+                }
             }
+            @media only screen and (max-width: $breakpoint-menu) {
+                flex-flow: column;
+
+                &:nth-child(even) {
+                    flex-flow: column;
+                }
+
+                &:nth-child(odd) {
+                    flex-flow: column;
+                }
+            }
+
         }
 
         .card-text {
@@ -319,10 +341,19 @@ main {
             width: calc(50% - 3rem);
             display: flex;
             flex-flow: column;
+
+            @media only screen and (max-width: $breakpoint-wide) {
+                width: calc(100% - 3rem);
+            }
         }
 
         picture {
             width: 50%;
+
+            @media only screen and (max-width: $breakpoint-wide) {
+                width: calc(100% - 2rem);
+                aspect-ratio: 3 / 2;
+            }
 
         }
 

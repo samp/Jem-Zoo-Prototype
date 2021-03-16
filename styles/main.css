@@ -377,8 +377,15 @@ main #cards-2 .card {
   margin-bottom: 2rem;
   width: calc(50% - 2rem);
 }
-main #cards-2 .card:nth-child(4n+3), main #cards-2 .card:nth-child(4n+4) {
-  flex-flow: row-reverse;
+@media only screen and (min-width: 1200px) {
+  main #cards-2 .card:nth-child(4n+3), main #cards-2 .card:nth-child(4n+4) {
+    flex-flow: row-reverse;
+  }
+}
+@media only screen and (max-width: 1200px) {
+  main #cards-2 .card {
+    flex-flow: column;
+  }
 }
 @media only screen and (max-width: 900px) {
   main #cards-2 .card {
@@ -387,11 +394,22 @@ main #cards-2 .card:nth-child(4n+3), main #cards-2 .card:nth-child(4n+4) {
     width: calc(100% - 2rem);
     margin-bottom: 1rem;
   }
-  main #cards-2 .card:nth-child(4n+3), main #cards-2 .card:nth-child(4n+4) {
-    flex-flow: row;
-  }
   main #cards-2 .card:nth-child(even) {
     flex-flow: row-reverse;
+  }
+  main #cards-2 .card:nth-child(odd) {
+    flex-flow: row;
+  }
+}
+@media only screen and (max-width: 600px) {
+  main #cards-2 .card {
+    flex-flow: column;
+  }
+  main #cards-2 .card:nth-child(even) {
+    flex-flow: column;
+  }
+  main #cards-2 .card:nth-child(odd) {
+    flex-flow: column;
   }
 }
 main #cards-2 .card-text {
@@ -400,8 +418,19 @@ main #cards-2 .card-text {
   display: flex;
   flex-flow: column;
 }
+@media only screen and (max-width: 1200px) {
+  main #cards-2 .card-text {
+    width: calc(100% - 3rem);
+  }
+}
 main #cards-2 picture {
   width: 50%;
+}
+@media only screen and (max-width: 1200px) {
+  main #cards-2 picture {
+    width: calc(100% - 2rem);
+    aspect-ratio: 3/2;
+  }
 }
 main #cards-2 img {
   height: 100%;

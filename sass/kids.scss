@@ -27,6 +27,10 @@ $palette-orange: #F47736;
 //$background-color: #ebdfe6;
 $background-color: #fff;
 
+$hero-palette: $palette-pink,
+$palette-yellow,
+$palette-teal;
+
 // Breakpoints
 $breakpoint-xl: 2000px;
 $breakpoint-wide: 1200px;
@@ -52,14 +56,86 @@ main {
     max-width: 2000px;
 }
 
+img {
+    max-width: 100%;
+}
+
 #kids-hero {
     @include mixins.plain-links(white);
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(5, minmax(0, 1fr));
     grid-template-rows: repeat(2, 1fr);
     grid-column-gap: 2rem;
     grid-row-gap: 2rem;
     margin: 0 1rem 1rem;
+    justify-items: stretch;
+
+    @media only screen and (max-width: $breakpoint-wide) {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+
+    @media only screen and (max-width: $breakpoint-medium) {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    @media only screen and (max-width: $breakpoint-menu) {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    img {
+        object-fit: cover;
+    }
+
+    .kids-hero-group {
+        grid-row: 1 / span 2;
+        display: flex;
+        flex-flow: column;
+        justify-content: space-between;
+
+        &:nth-of-type(even) {
+            flex-flow: column-reverse;
+        }
+
+        @media only screen and (max-width: $breakpoint-wide) {
+            grid-row: unset;
+            grid-column: span 2;
+            flex-flow: row;
+            gap: 2rem;
+
+            &:nth-of-type(2) {
+                grid-column: unset;
+                grid-row: span 2;
+            }
+
+            &:nth-of-type(4) {
+                flex-flow: row;
+            }
+        }
+
+        @media only screen and (max-width: $breakpoint-medium) {
+            flex-flow: column;
+            grid-column: span 1;
+            grid-row: span 2;
+
+            &:nth-of-type(even) {
+                flex-flow: column-reverse;
+            }
+        }
+
+        @media only screen and (max-width: $breakpoint-menu) {
+            flex-flow: row;
+            grid-column: span 2;
+
+            &:nth-of-type(2) {
+                grid-column: span 2;
+                grid-row: unset;
+            }
+
+            &:nth-of-type(even) {
+                flex-flow: row-reverse;
+            }
+        }
+    }
 
     .hero-text {
         text-align: right;
@@ -70,16 +146,39 @@ main {
         margin: 0;
         font-family: $secondary-font;
         color: white;
-        font-size: 2rem;
+        font-size: 3vw;
         width: 40%;
 
         h2 {
             font-size: 3vw;
         }
+
+        @media only screen and (max-width: $breakpoint-wide) {
+            bottom: 4vw;
+            width: 35%;
+            left: 55%;
+
+            h2 {
+                font-size: 4vw;
+            }
+        }
+
+        @media only screen and (max-width: $breakpoint-medium) {
+            h2 {
+                font-size: 6vw;
+            }
+        }
     }
 
     h3 {
         font-size: 2.1vw;
+
+        @media only screen and (max-width: $breakpoint-medium) {
+            font-size: 3vw;
+        }
+        @media only screen and (max-width: $breakpoint-menu) {
+            font-size: 5vw;
+        }
     }
 
     .card-text {
@@ -92,19 +191,38 @@ main {
         display: block;
         flex-basis: auto;
         margin: 0.5rem 0;
-    }
 
-    .kids-hero-card:nth-of-type(1) {
-        grid-column: 1 / span 2;
-        grid-row: 1 / span 2;
-        background-color: $palette-bright-green;
-        color: white;
+        @media only screen and (max-width: $breakpoint-medium) {
+            font-size: 2.2vw;
+        }
+
+        @media only screen and (max-width: $breakpoint-menu) {
+            font-size: 3vw;
+        }
     }
 
     picture {
         width: calc(100% - 2rem);
         margin: 1rem;
     }
+
+    .kids-hero-group:nth-of-type(2)>* {
+        background-color: $palette-pink;
+    }
+
+    .kids-hero-group:nth-of-type(3)>* {
+        background-color: $palette-yellow;
+
+        a {
+            color: black;
+        }
+
+    }
+
+    .kids-hero-group:nth-of-type(4)>* {
+        background-color: $palette-teal;
+    }
+
 
     .kids-hero-card:nth-of-type(even) {
         border-radius: 50%;
@@ -114,29 +232,16 @@ main {
         }
     }
 
-
-    .kids-hero-card:nth-of-type(3n+2) {
-        background-color: $palette-pink;
-        color: white;
-    }
-
-    .kids-hero-card:nth-of-type(3n+3) {
-        background-color: $palette-yellow;
-
-        a {
-            color: black;
-        }
-
-    }
-
-    .kids-hero-card:nth-of-type(3n+4) {
-        background-color: $palette-teal;
-        color: white;
-    }
-
     .kids-hero-card {
         aspect-ratio: 1 / 1;
         margin: 0;
+
+        @media only screen and (max-width: $breakpoint-wide) {
+            &#kids-hero-main {
+                aspect-ratio: unset;
+            }
+
+        }
     }
 
     .grow-rotate {
@@ -153,7 +258,21 @@ main {
     #kids-hero-main {
         z-index: 999;
         transform: perspective(1px) translateZ(0);
+        grid-column: 1 / span 2;
+        grid-row: 1 / span 2;
+        background-color: $palette-bright-green;
+        color: white;
 
+        @media only screen and (max-width: $breakpoint-wide) {
+            grid-column: 1 / span 3;
+
+            img {
+                aspect-ratio: 3 / 2;
+            }
+        }
+        @media only screen and (max-width: $breakpoint-menu) {
+            grid-column: 1 / span 2;
+        }
     }
 
     @media only screen and (min-width: $breakpoint-xl) {
@@ -164,10 +283,6 @@ main {
         p {
             font-size: 2rem;
         }
-    }
-
-    @media only screen and (max-width: $breakpoint-medium) {
-        height: 2rem;
     }
 }
 
@@ -189,5 +304,6 @@ main {
 
     img {
         border-radius: 20px;
+        max-width: 100%;
     }
 }

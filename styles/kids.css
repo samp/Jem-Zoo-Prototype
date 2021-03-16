@@ -15,18 +15,88 @@ main {
   max-width: 2000px;
 }
 
+img {
+  max-width: 100%;
+}
+
 #kids-hero {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(5, minmax(0, 1fr));
   grid-template-rows: repeat(2, 1fr);
   grid-column-gap: 2rem;
   grid-row-gap: 2rem;
   margin: 0 1rem 1rem;
+  justify-items: stretch;
 }
 #kids-hero a,
 #kids-hero a:visited {
   text-decoration: none;
   color: white;
+}
+@media only screen and (max-width: 1200px) {
+  #kids-hero {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+@media only screen and (max-width: 900px) {
+  #kids-hero {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+@media only screen and (max-width: 600px) {
+  #kids-hero {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+#kids-hero img {
+  object-fit: cover;
+}
+#kids-hero .kids-hero-group {
+  grid-row: 1/span 2;
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+}
+#kids-hero .kids-hero-group:nth-of-type(even) {
+  flex-flow: column-reverse;
+}
+@media only screen and (max-width: 1200px) {
+  #kids-hero .kids-hero-group {
+    grid-row: unset;
+    grid-column: span 2;
+    flex-flow: row;
+    gap: 2rem;
+  }
+  #kids-hero .kids-hero-group:nth-of-type(2) {
+    grid-column: unset;
+    grid-row: span 2;
+  }
+  #kids-hero .kids-hero-group:nth-of-type(4) {
+    flex-flow: row;
+  }
+}
+@media only screen and (max-width: 900px) {
+  #kids-hero .kids-hero-group {
+    flex-flow: column;
+    grid-column: span 1;
+    grid-row: span 2;
+  }
+  #kids-hero .kids-hero-group:nth-of-type(even) {
+    flex-flow: column-reverse;
+  }
+}
+@media only screen and (max-width: 600px) {
+  #kids-hero .kids-hero-group {
+    flex-flow: row;
+    grid-column: span 2;
+  }
+  #kids-hero .kids-hero-group:nth-of-type(2) {
+    grid-column: span 2;
+    grid-row: unset;
+  }
+  #kids-hero .kids-hero-group:nth-of-type(even) {
+    flex-flow: row-reverse;
+  }
 }
 #kids-hero .hero-text {
   text-align: right;
@@ -37,14 +107,39 @@ main {
   margin: 0;
   font-family: "Londrina Solid", cursive;
   color: white;
-  font-size: 2rem;
+  font-size: 3vw;
   width: 40%;
 }
 #kids-hero .hero-text h2 {
   font-size: 3vw;
 }
+@media only screen and (max-width: 1200px) {
+  #kids-hero .hero-text {
+    bottom: 4vw;
+    width: 35%;
+    left: 55%;
+  }
+  #kids-hero .hero-text h2 {
+    font-size: 4vw;
+  }
+}
+@media only screen and (max-width: 900px) {
+  #kids-hero .hero-text h2 {
+    font-size: 6vw;
+  }
+}
 #kids-hero h3 {
   font-size: 2.1vw;
+}
+@media only screen and (max-width: 900px) {
+  #kids-hero h3 {
+    font-size: 3vw;
+  }
+}
+@media only screen and (max-width: 600px) {
+  #kids-hero h3 {
+    font-size: 5vw;
+  }
 }
 #kids-hero .card-text {
   height: calc(100% - 2rem);
@@ -56,15 +151,31 @@ main {
   flex-basis: auto;
   margin: 0.5rem 0;
 }
-#kids-hero .kids-hero-card:nth-of-type(1) {
-  grid-column: 1/span 2;
-  grid-row: 1/span 2;
-  background-color: #00704A;
-  color: white;
+@media only screen and (max-width: 900px) {
+  #kids-hero p {
+    font-size: 2.2vw;
+  }
+}
+@media only screen and (max-width: 600px) {
+  #kids-hero p {
+    font-size: 3vw;
+  }
 }
 #kids-hero picture {
   width: calc(100% - 2rem);
   margin: 1rem;
+}
+#kids-hero .kids-hero-group:nth-of-type(2) > * {
+  background-color: #EC4899;
+}
+#kids-hero .kids-hero-group:nth-of-type(3) > * {
+  background-color: #FFD747;
+}
+#kids-hero .kids-hero-group:nth-of-type(3) > * a {
+  color: black;
+}
+#kids-hero .kids-hero-group:nth-of-type(4) > * {
+  background-color: #00B2AF;
 }
 #kids-hero .kids-hero-card:nth-of-type(even) {
   border-radius: 50%;
@@ -72,23 +183,14 @@ main {
 #kids-hero .kids-hero-card:nth-of-type(even) img {
   border-radius: 50%;
 }
-#kids-hero .kids-hero-card:nth-of-type(3n+2) {
-  background-color: #EC4899;
-  color: white;
-}
-#kids-hero .kids-hero-card:nth-of-type(3n+3) {
-  background-color: #FFD747;
-}
-#kids-hero .kids-hero-card:nth-of-type(3n+3) a {
-  color: black;
-}
-#kids-hero .kids-hero-card:nth-of-type(3n+4) {
-  background-color: #00B2AF;
-  color: white;
-}
 #kids-hero .kids-hero-card {
   aspect-ratio: 1/1;
   margin: 0;
+}
+@media only screen and (max-width: 1200px) {
+  #kids-hero .kids-hero-card#kids-hero-main {
+    aspect-ratio: unset;
+  }
 }
 #kids-hero .grow-rotate {
   /* From https://ianlunn.github.io/Hover/ */
@@ -116,6 +218,23 @@ main {
 #kids-hero #kids-hero-main {
   z-index: 999;
   transform: perspective(1px) translateZ(0);
+  grid-column: 1/span 2;
+  grid-row: 1/span 2;
+  background-color: #00704A;
+  color: white;
+}
+@media only screen and (max-width: 1200px) {
+  #kids-hero #kids-hero-main {
+    grid-column: 1/span 3;
+  }
+  #kids-hero #kids-hero-main img {
+    aspect-ratio: 3/2;
+  }
+}
+@media only screen and (max-width: 600px) {
+  #kids-hero #kids-hero-main {
+    grid-column: 1/span 2;
+  }
 }
 @media only screen and (min-width: 2000px) {
   #kids-hero h3 {
@@ -123,11 +242,6 @@ main {
   }
   #kids-hero p {
     font-size: 2rem;
-  }
-}
-@media only screen and (max-width: 900px) {
-  #kids-hero {
-    height: 2rem;
   }
 }
 
@@ -146,6 +260,7 @@ main {
 }
 .card img {
   border-radius: 20px;
+  max-width: 100%;
 }
 
 /*# sourceMappingURL=kids.css.map */
