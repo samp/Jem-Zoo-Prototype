@@ -1,6 +1,5 @@
 $background-image: "../images/topography.svg";
 $palette-pink: #EC4899;
-$palette-bright-green: #00704A;
 
 @use "mixins.scss";
 
@@ -18,13 +17,10 @@ sans-serif;
 
 // Colour scheme
 $palette-purple: #3E1052;
-//$palette-green: #00704A;
 $palette-green: #00704A;
 $palette-teal: #00B2AF;
 $palette-yellow: #FFD747;
-//$palette-yellow: #FFf;
 $palette-orange: #F47736;
-//$background-color: #ebdfe6;
 $background-color: #fff;
 
 $hero-palette: $palette-pink,
@@ -176,6 +172,7 @@ img {
         @media only screen and (max-width: $breakpoint-medium) {
             font-size: 3vw;
         }
+
         @media only screen and (max-width: $breakpoint-menu) {
             font-size: 5vw;
         }
@@ -260,7 +257,7 @@ img {
         transform: perspective(1px) translateZ(0);
         grid-column: 1 / span 2;
         grid-row: 1 / span 2;
-        background-color: $palette-bright-green;
+        background-color: $palette-green;
         color: white;
 
         @media only screen and (max-width: $breakpoint-wide) {
@@ -270,6 +267,7 @@ img {
                 aspect-ratio: 3 / 2;
             }
         }
+
         @media only screen and (max-width: $breakpoint-menu) {
             grid-column: 1 / span 2;
         }
@@ -305,5 +303,17 @@ img {
     img {
         border-radius: 20px;
         max-width: 100%;
+    }
+}
+
+main {
+    #cards-2 {
+        picture {
+            @media only screen and (max-width: $breakpoint-wide) {
+                width: calc(100% - 2rem);
+                aspect-ratio: 3 / 2;
+            }
+        }
+
     }
 }

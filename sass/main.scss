@@ -16,11 +16,11 @@ sans-serif;
 
 // Colour scheme
 $palette-purple: #3E1052;
-//$palette-green: #00704A;
 $palette-green: #00704A;
 $palette-teal: #00B2AF;
-$palette-yellow: #FFD747;
-//$palette-yellow: #FFf;
+//$palette-yellow: #FFD747;
+//$palette-yellow: lighten(#FFD747, 5%);
+$palette-yellow: #FFDD61;
 $palette-orange: #F47736;
 //$background-color: #ebdfe6;
 $background-color: #fff;
@@ -159,12 +159,9 @@ header {
         }
     }
 
-    @media only screen and (max-width: $breakpoint-small) {
-        @include mixins.collapsing-menu(4rem, $palette-purple);
-    }
-
     @media only screen and (max-width: $breakpoint-menu) {
-        @include mixins.collapsing-menu(5rem, $palette-purple);
+        //@include mixins.collapsing-menu(5rem, $palette-purple);
+        @include mixins.icon-menu($nav-icons);
     }
 
 }
@@ -322,6 +319,7 @@ main {
                     flex-flow: row;
                 }
             }
+
             @media only screen and (max-width: $breakpoint-menu) {
                 flex-flow: column;
 
@@ -348,13 +346,12 @@ main {
         }
 
         picture {
-            width: 50%;
-
             @media only screen and (max-width: $breakpoint-wide) {
-                width: calc(100% - 2rem);
+                width: 100%;
                 aspect-ratio: 3 / 2;
             }
 
+            width: 50%;
         }
 
         img {

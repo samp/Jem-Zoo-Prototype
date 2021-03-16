@@ -263,4 +263,11 @@ img {
   max-width: 100%;
 }
 
+@media only screen and (max-width: 1200px) {
+  main #cards-2 picture {
+    width: calc(100% - 2rem);
+    aspect-ratio: 3/2;
+  }
+}
+
 /*# sourceMappingURL=kids.css.map */
