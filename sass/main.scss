@@ -221,6 +221,7 @@ main {
         align-self: center;
         margin-top: auto;
         width: 50%;
+        min-width: fit-content;
 
         a {
             padding: 1rem;
@@ -278,6 +279,11 @@ main {
             padding: 1rem;
 
         }
+
+        img{
+            aspect-ratio: 3 / 2;
+            object-fit: cover;
+        }
     }
 
     #cards-2 {
@@ -307,7 +313,7 @@ main {
 
             @media only screen and (max-width: $breakpoint-medium) {
                 margin-left: 1rem;
-                margin-right: 1rem;
+                margin-right: 0rem;
                 width: calc(100% - 2rem);
                 margin-bottom: 1rem;
 
@@ -322,6 +328,10 @@ main {
 
             @media only screen and (max-width: $breakpoint-menu) {
                 flex-flow: column;
+                margin-left: 1rem;
+                margin-right: 0;
+                width: calc(50% - 1.5rem);
+                margin-bottom: 1rem;
 
                 &:nth-child(even) {
                     flex-flow: column;
@@ -341,17 +351,35 @@ main {
             flex-flow: column;
 
             @media only screen and (max-width: $breakpoint-wide) {
+                width:  calc(100% - 3rem);
+            }
+
+            @media only screen and (max-width: $breakpoint-medium) {
+                width: calc(50% - 3rem);
+            }
+
+            @media only screen and (max-width: $breakpoint-menu) {
                 width: calc(100% - 3rem);
             }
         }
 
         picture {
+            width: 50%;
+
             @media only screen and (max-width: $breakpoint-wide) {
                 width: 100%;
                 aspect-ratio: 3 / 2;
             }
 
-            width: 50%;
+            @media only screen and (max-width: $breakpoint-medium) {
+                width: 50%;
+            }
+
+            @media only screen and (max-width: $breakpoint-menu) {
+                width: 100%;
+            }
+
+
         }
 
         img {
