@@ -80,9 +80,7 @@ img {
         grid-row-gap: 1rem;
     }
 
-    @media only screen and (max-width: $breakpoint-small) {
-        
-    }
+    @media only screen and (max-width: $breakpoint-small) {}
 
     img {
         object-fit: cover;
@@ -127,7 +125,7 @@ img {
         @media only screen and (max-width: $breakpoint-menu) {
             flex-flow: row;
             grid-column: span 2;
-             grid-row: unset;
+            grid-row: unset;
 
             &:nth-of-type(2) {
                 grid-column: span 2;
@@ -316,17 +314,12 @@ img {
         border-radius: 20px;
         max-width: 100%;
     }
-   
+
 }
 
 main {
     #cards-2 {
-        .card{
-             @media only screen and (max-width: $breakpoint-menu) {
-            width: calc(100% - 2rem);
-        }
-        }
-        
+
         picture {
             @media only screen and (max-width: $breakpoint-wide) {
                 width: calc(100% - 2rem);
@@ -345,7 +338,7 @@ main {
 
         .card-text {
             @media only screen and (max-width: $breakpoint-wide) {
-                width: calc(100% - 2rem);
+                width: calc(100% - 3rem);
             }
 
             @media only screen and (max-width: $breakpoint-medium) {
@@ -353,7 +346,7 @@ main {
             }
 
             @media only screen and (max-width: $breakpoint-menu) {
-                width: calc(100% - 2rem);
+                width: calc(100% - 3rem);
             }
         }
     }

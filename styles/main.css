@@ -288,7 +288,6 @@ main #cards-4 .card-text {
   padding: 1rem;
 }
 main #cards-4 img {
-  aspect-ratio: 3/2;
   object-fit: cover;
 }
 main #cards-2 {
@@ -314,10 +313,8 @@ main #cards-2 .card {
 }
 @media only screen and (max-width: 900px) {
   main #cards-2 .card {
-    margin-left: 1rem;
-    margin-right: 0rem;
+    margin: 0 1rem 1rem;
     width: calc(100% - 2rem);
-    margin-bottom: 1rem;
   }
   main #cards-2 .card:nth-child(even) {
     flex-flow: row-reverse;
@@ -329,10 +326,7 @@ main #cards-2 .card {
 @media only screen and (max-width: 600px) {
   main #cards-2 .card {
     flex-flow: column;
-    margin-left: 1rem;
-    margin-right: 0;
-    width: calc(50% - 1.5rem);
-    margin-bottom: 1rem;
+    width: calc(100% - 1.5rem);
   }
   main #cards-2 .card:nth-child(even) {
     flex-flow: column;
