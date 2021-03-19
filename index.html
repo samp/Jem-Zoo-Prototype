@@ -32,7 +32,7 @@
                 <ul id="menu">
                     <li><a href="under-construction.html">Animals</a></li>
                     <li><a href="things-to-do.html">Things to do</a></li>
-                    <li><a href="under-construction.html">What we do</a></li>
+                    <li><a href="what-we-do.html">What we do</a></li>
                     <li><a href="under-construction.html">Tickets</a></li>
                 </ul>
             </nav>
@@ -49,7 +49,7 @@
         </div>
     </div>
     <main>
-        <div id="cards-4">
+        <div class="cards-4">
             <div class="card">
                 <a href="#" class="card-wrapper">
                     <picture>
@@ -65,7 +65,7 @@
             </div>
 
             <div class="card">
-                <a href="#" class="card-wrapper">
+                <a href="things-to-do" class="card-wrapper">
                     <picture>
                         <source srcset="images/garden-square-500.webp">
                         <img src="images/garden-square-fallback.jpg"
@@ -108,21 +108,22 @@
             </div>
         </div>
 
-        <div id="cards-2">
+        <div class="cards-2">
             <div class="card">
 
                 <picture>
-                    <source srcset="images/ticket-500.webp">
-                    <img src="images/ticket-fallback.jpg" alt="A hand holds up a ticket."></img>
+                    <source srcset="images/ticket-square-500.webp" media="(min-width: 1200px)">
+                    <source srcset="images/ticket-wide-500.webp">
+                    <img src="images/ticket-square-fallback.jpg" alt="A hand holds up a ticket."></img>
                 </picture>
 
                 <div class="card-text">
                     <h3>Tickets</h3>
                     <div>
-                    <p>Adult: £20</p>
-                    <p>Child (2-16): £10</p>
-                    <p>Concession: £15</p>
-                    <p>Under 2s go free</p>
+                        <p>Adult: £20</p>
+                        <p>Child (2-16): £10</p>
+                        <p>Concession: £15</p>
+                        <p>Under 2s go free</p>
                     </div>
                     <button><a href="#">Buy tickets</a></button>
                 </div>
@@ -131,26 +132,24 @@
             <div class="card">
 
                 <picture>
-                    <source srcset="images/kids-square-500.webp">
-                    <img src="images/kids-square-fallback.jpg" alt="A family view a large aquarium."></img>
+                    <source srcset="images/kids-square-500.webp" media="(min-width: 1200px)">
+                    <source srcset="images/kids-wide-500.webp">
+                    <img src="images/kids-square-fallback.jpg" alt="Three children stand next to each other."></img>
                 </picture>
                 <div class="card-text">
                     <h3>Kid's Zone</h3>
                     <p>Visit our kid's page to learn about how you can help wildlife in your garden!</p>
-                    <button><a href="kids">Visit</a></button>
+                    <button><a href="kids.html">Visit</a></button>
                 </div>
 
             </div>
         </div>
 
-        <div id="cards-1">
+        <div class="cards-1">
             <div class="card">
                 <picture>
-                    <source srcset="images/panda-750.webp" media="(min-width: 1500px)">
-                    <source srcset="images/panda-square-450.webp" media="(min-width: 900px) and (max-width: 1500px)">
-                    <source srcset="images/panda-750.webp" media="(min-width: 450px) and (max-width: 900px)">
-                    <source srcset="images/panda-450.webp" media="(max-width: 450px)">
-                    <img src="images/panda-fallback.jpg" alt="Close up shot of Kenny the red panda"></img>
+                    <source srcset="images/panda-750.webp">
+                    <img class="right" src="images/panda-fallback.jpg" alt="Close up shot of Kenny the red panda"></img>
                 </picture>
                 <div class="card-text">
                     <h3>Animal Spotlight</h3>
@@ -168,24 +167,20 @@
 
             <div class="card">
                 <picture>
-                    <source srcset="images/parrots-750.webp" media="(min-width: 900px)">
-                    <source srcset="images/parrots-square-450.webp" media="(max-width: 900px)">
-                    <source srcset="images/parrots-450.webp" media="(max-width: 450px)">
+                    <source srcset="images/parrots-750.webp">
                     <img src="images/parrots-fallback.jpg" alt="Two blue parrots look to the left."></img>
                 </picture>
                 <div class="card-text">
                     <h3>Donate</h3>
                     <p>Help us prevent extinction by donating to our zoo and conservation efforts. Your donation allows
                         us to care for our 200+ species, maintain our grounds, and contributes to our conservation
-                        program.</p>
+                        program. You can also choose to buy treats and toys for your favourite animals!</p>
                     <button><a href="#">Donate today</a></button>
                 </div>
             </div>
             <div class="card">
                 <picture>
-                    <source srcset="images/deer-750.webp" media="(min-width: 900px)">
-                    <source srcset="images/deer-square-450.webp" media="(max-width: 900px)">
-                    <source srcset="images/deer-450.webp" media="(max-width: 450px)">
+                    <source srcset="images/deer-750.webp">
                     <img src="images/deer-fallback.jpg" alt="A child feeds deer through a fence."></img>
                 </picture>
 

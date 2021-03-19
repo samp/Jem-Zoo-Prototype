@@ -66,8 +66,12 @@ img {
     width: 100%;
 }
 
-.nospace {
-    
+.right {
+    object-position: right;
+}
+
+.left {
+    object-position: left;
 }
 
 // Header section
@@ -239,7 +243,7 @@ main {
         line-height: 1.3;
     }
 
-    #cards-4 {
+    .cards-4 {
         @include mixins.plain-links(black);
         $card-links: "a>*";
         @include mixins.hover-links($card-links, $palette-teal);
@@ -284,13 +288,12 @@ main {
 
         }
 
-        img{
-            //aspect-ratio: 3 / 2;
+        img {
             object-fit: cover;
         }
     }
 
-    #cards-2 {
+    .cards-2 {
         display: flex;
         flex-flow: row;
         flex-wrap: wrap;
@@ -347,9 +350,10 @@ main {
             width: calc(50% - 3rem);
             display: flex;
             flex-flow: column;
+            flex-grow: 1;
 
             @media only screen and (max-width: $breakpoint-wide) {
-                width:  calc(100% - 3rem);
+                width: calc(100% - 3rem);
             }
 
             @media only screen and (max-width: $breakpoint-medium) {
@@ -387,7 +391,7 @@ main {
 
     }
 
-    #cards-1 {
+    .cards-1 {
         .card {
             display: flex;
             flex-flow: row;
