@@ -15,10 +15,6 @@ main {
   max-width: 2000px;
 }
 
-img {
-  max-width: 100%;
-}
-
 #kids-hero {
   display: grid;
   grid-template-columns: repeat(5, minmax(0, 1fr));
@@ -107,11 +103,15 @@ img {
   margin: 0;
   font-family: "Londrina Solid", cursive;
   color: white;
-  font-size: 3vw;
   width: 40%;
 }
 #kids-hero .hero-text h2 {
   font-size: 3vw;
+}
+@media only screen and (min-width: 2000px) {
+  #kids-hero .hero-text h2 {
+    font-size: 4rem;
+  }
 }
 @media only screen and (max-width: 1200px) {
   #kids-hero .hero-text {
@@ -266,7 +266,6 @@ img {
 }
 .card img {
   border-radius: 20px;
-  max-width: 100%;
 }
 
 @media only screen and (max-width: 1200px) {

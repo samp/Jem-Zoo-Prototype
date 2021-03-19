@@ -1,5 +1,10 @@
 html {
   min-width: 350px;
+  font-display: swap;
+}
+
+html.wf-loading * {
+  opacity: 0;
 }
 
 body {

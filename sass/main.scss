@@ -43,6 +43,11 @@ $background-image: "../images/topography.svg";
 // Global styles
 html {
     min-width: 350px;
+    font-display: swap;
+}
+
+html.wf-loading * {
+    opacity: 0;
 }
 
 body {
@@ -69,8 +74,8 @@ h4 {
 
 img {
     width: 100%;
-    height:100%;
-    object-fit:cover;
+    height: 100%;
+    object-fit: cover;
 }
 
 picture,
@@ -223,7 +228,7 @@ main {
     margin-bottom: 2rem;
 }
 
-.card-text{
+.card-text {
     display: flex;
     flex-flow: column;
     flex-grow: 1;
@@ -375,6 +380,7 @@ main {
 
     picture {
         width: 50%;
+
         @media only screen and (max-width: $breakpoint-medium) {
             width: 100%;
         }
@@ -382,6 +388,7 @@ main {
 
     .card:nth-of-type(even) {
         flex-flow: row-reverse;
+
         @media only screen and (max-width: $breakpoint-medium) {
             flex-flow: column;
         }
@@ -416,7 +423,7 @@ footer {
     text-align: center;
     padding: 2rem 0;
     font-family: $body-font;
-    margin-top:auto;
+    margin-top: auto;
 
     .footer-wrapper {
         width: calc(80% - 2rem);

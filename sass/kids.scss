@@ -52,10 +52,6 @@ main {
     max-width: 2000px;
 }
 
-img {
-    max-width: 100%;
-}
-
 #kids-hero {
     @include mixins.plain-links(white);
     display: grid;
@@ -143,11 +139,13 @@ img {
         margin: 0;
         font-family: $secondary-font;
         color: white;
-        font-size: 3vw;
         width: 40%;
 
         h2 {
             font-size: 3vw;
+            @media only screen and (min-width: $breakpoint-xl) {
+                font-size: 4rem;
+            }
         }
 
         @media only screen and (max-width: $breakpoint-wide) {
@@ -243,7 +241,6 @@ img {
             &#kids-hero-main {
                 aspect-ratio: unset;
             }
-
         }
     }
 
@@ -303,19 +300,16 @@ img {
     picture {
         width: calc(50% + 4rem);
         margin: 1rem;
-
     }
 
     img {
         border-radius: 20px;
-        max-width: 100%;
     }
 
 }
 
 main {
     .cards-2 {
-
         picture {
             @media only screen and (max-width: $breakpoint-wide) {
                 width: calc(100% - 2rem);
@@ -324,7 +318,6 @@ main {
 
             @media only screen and (max-width: $breakpoint-medium) {
                 width: calc(50% - 1rem);
-                //aspect-ratio: 3 / 2;
             }
 
             @media only screen and (max-width: $breakpoint-menu) {
