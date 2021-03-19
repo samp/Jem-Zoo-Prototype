@@ -82,10 +82,6 @@ img {
 
     @media only screen and (max-width: $breakpoint-small) {}
 
-    img {
-        object-fit: cover;
-    }
-
     .kids-hero-group {
         grid-row: 1 / span 2;
         display: flex;

@@ -50,9 +50,6 @@ img {
     grid-row-gap: 1rem;
   }
 }
-#kids-hero img {
-  object-fit: cover;
-}
 #kids-hero .kids-hero-group {
   grid-row: 1/span 2;
   display: flex;
