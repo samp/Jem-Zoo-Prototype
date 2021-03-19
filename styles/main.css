@@ -116,14 +116,6 @@ header nav ul {
   align-items: stretch;
   width: 100%;
 }
-header nav ul a,
-header nav ul a:hover {
-  transition: all 0.2s linear;
-}
-header nav ul a:hover {
-  color: white;
-  background-color: #00B2AF;
-}
 header nav ul li {
   width: 25%;
   display: flex;
@@ -133,6 +125,13 @@ header nav ul a {
   display: block;
   padding: 1rem 2rem;
   width: 100%;
+}
+header nav ul a, header nav ul a:hover {
+  transition: all 0.2s linear;
+}
+header nav ul a:hover {
+  color: white;
+  background-color: #00B2AF;
 }
 @media only screen and (max-width: 600px) {
   header nav ul {
@@ -197,13 +196,10 @@ main {
   max-width: 1500px;
   margin: 2rem auto;
 }
-main button,
-main button:hover {
-  transition: all 0.2s linear;
-}
-main button:hover {
+main a,
+main a:visited {
+  text-decoration: none;
   color: white;
-  background-color: #00B2AF;
 }
 @media only screen and (max-width: 1200px) {
   main {
@@ -219,24 +215,25 @@ main picture,
 main img {
   display: block;
 }
-main button {
+main .button {
   background-color: #00704A;
   display: inline-block;
+  text-align: center;
   border: none;
   border-radius: 1rem;
   align-self: center;
   margin-top: auto;
   width: 50%;
   min-width: fit-content;
-}
-main button a,
-main button a:visited {
-  text-decoration: none;
-  color: white;
-}
-main button a {
   padding: 1rem;
   display: block;
+}
+main .button, main .button:hover {
+  transition: all 0.2s linear;
+}
+main .button:hover {
+  color: white;
+  background-color: #00B2AF;
 }
 main .card {
   margin: 0 1rem;
@@ -253,18 +250,17 @@ main .cards-4 a:visited {
   text-decoration: none;
   color: black;
 }
-main .cards-4 a > *,
-main .cards-4 a > *:hover {
-  transition: all 0.2s linear;
-}
-main .cards-4 a > *:hover {
-  color: white;
-  background-color: #00B2AF;
-}
 @media only screen and (max-width: 450px) {
   main .cards-4 {
     flex-flow: column;
   }
+}
+main .cards-4 a, main .cards-4 a:hover {
+  transition: all 0.2s linear;
+}
+main .cards-4 a:hover {
+  color: white;
+  background-color: #00B2AF;
 }
 main .cards-4 .card {
   max-width: calc(25% - 2rem);

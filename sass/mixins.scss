@@ -13,14 +13,14 @@
     }
 }
 
-@mixin hover-links($element, $highlight-color) {
+@mixin hover-links($highlight-color) {
 
-    #{$element},
-    #{$element}:hover {
+    &,
+    &:hover {
         transition: all 0.2s linear;
     }
 
-    #{$element}:hover {
+    &:hover {
         color: white;
         background-color: $highlight-color;
     }

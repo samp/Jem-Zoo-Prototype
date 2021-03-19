@@ -146,7 +146,7 @@ header {
 
         ul {
             @include mixins.no-bullets();
-            @include mixins.hover-links(a, $palette-teal);
+
             display: flex;
             flex-flow: row;
             align-items: stretch;
@@ -159,6 +159,7 @@ header {
             }
 
             a {
+                @include mixins.hover-links($palette-teal);
                 display: block;
                 padding: 1rem 2rem;
                 //margin: auto;
@@ -199,7 +200,7 @@ header {
 
 // Body content
 main {
-    @include mixins.hover-links(button, $palette-teal);
+    @include mixins.plain-links(white);
     font-family: $body-font;
     width: 80%;
     max-width: 1500px;
@@ -220,10 +221,11 @@ main {
         display: block;
     }
 
-    button {
+    .button {
+        @include mixins.hover-links($palette-teal);
         background-color: $palette-green;
         display: inline-block;
-        @include mixins.plain-links(white);
+        text-align: center;
         border: none;
         border-radius: 1rem;
         align-self: center;
@@ -231,10 +233,9 @@ main {
         width: 50%;
         min-width: fit-content;
 
-        a {
-            padding: 1rem;
-            display: block;
-        }
+        padding: 1rem;
+        display: block;
+
     }
 
     .card {
@@ -246,7 +247,7 @@ main {
     .cards-4 {
         @include mixins.plain-links(black);
         $card-links: "a>*";
-        @include mixins.hover-links($card-links, $palette-teal);
+
 
         display: flex;
         flex-flow: row;
@@ -254,6 +255,10 @@ main {
 
         @media only screen and (max-width: $breakpoint-small) {
             flex-flow: column;
+        }
+
+        a {
+            @include mixins.hover-links($palette-teal);
         }
 
         .card {
