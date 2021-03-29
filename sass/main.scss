@@ -245,6 +245,7 @@ main {
     }
 
     .card {
+        flex-flow:column;
         max-width: calc(25% - 2rem);
 
         @media only screen and (max-width: $breakpoint-medium) {
@@ -255,13 +256,11 @@ main {
         }
 
         @media only screen and (max-width: $breakpoint-small) {
-            display: flex;
-            flex-flow: row;
             min-width: calc(100% - 2rem);
         }
     }
 
-    .card-wrapper {
+    .card-link-wrapper {
         @include mixins.hover-links($palette-teal);
         display: flex;
         flex-flow: column;

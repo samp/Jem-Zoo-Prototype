@@ -249,6 +249,7 @@ main a:visited {
   }
 }
 .cards-4 .card {
+  flex-flow: column;
   max-width: calc(25% - 2rem);
 }
 @media only screen and (max-width: 900px) {
@@ -261,21 +262,19 @@ main a:visited {
 }
 @media only screen and (max-width: 450px) {
   .cards-4 .card {
-    display: flex;
-    flex-flow: row;
     min-width: calc(100% - 2rem);
   }
 }
-.cards-4 .card-wrapper {
+.cards-4 .card-link-wrapper {
   display: flex;
   flex-flow: column;
   height: 100%;
   flex-grow: 1;
 }
-.cards-4 .card-wrapper, .cards-4 .card-wrapper:hover {
+.cards-4 .card-link-wrapper, .cards-4 .card-link-wrapper:hover {
   transition: all 0.2s linear;
 }
-.cards-4 .card-wrapper:hover {
+.cards-4 .card-link-wrapper:hover {
   color: white;
   background-color: #00B2AF;
 }
