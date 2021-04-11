@@ -18,11 +18,7 @@ sans-serif;
 $palette-purple: #3E1052;
 $palette-green: #00704A;
 $palette-teal: #00B2AF;
-//$palette-yellow: #FFD747;
-//$palette-yellow: lighten(#FFD747, 5%);
 $palette-yellow: #FFDD61;
-$palette-orange: #F47736;
-//$background-color: #ebdfe6;
 $background-color: #fff;
 
 // Breakpoints
@@ -38,7 +34,6 @@ $nav-icons: "../images/hippo.svg",
 "../images/ticket.svg";
 
 $background-image: "../images/topography.svg";
-
 
 // Global styles
 html {
@@ -92,7 +87,7 @@ img {
 }
 
 // Header
-header {
+.header {
     @include mixins.plain-links(white);
     color: white;
     width: 100%;
@@ -139,7 +134,7 @@ header {
         }
     }
 
-    nav {
+    .navbar {
         font-family: $secondary-font;
         text-transform: uppercase;
         width: 66%;
@@ -154,17 +149,19 @@ header {
             width: 100%;
         }
 
-        ul {
+        .menu {
             @include mixins.no-bullets();
             display: flex;
             flex-flow: row;
             align-items: stretch;
             width: 100%;
+            
 
             li {
                 width: 25%;
                 display: flex;
                 align-items: center;
+                flex-grow: 1;
             }
 
             a {
@@ -172,6 +169,7 @@ header {
                 display: block;
                 padding: 1rem 2rem;
                 width: 100%;
+                flex-grow: 1;
             }
         }
     }
@@ -182,7 +180,7 @@ header {
 }
 
 // Hero image
-#hero {
+.hero {
     position: relative;
     z-index: 998;
 
@@ -205,7 +203,7 @@ header {
 }
 
 // Main body
-main {
+.main {
     @include mixins.plain-links(white);
     font-family: $body-font;
     width: 80%;
@@ -415,7 +413,7 @@ main {
 }
 
 // Footer
-footer {
+.footer {
     background-color: $palette-purple;
     color: white;
     width: 100%;

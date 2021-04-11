@@ -9,7 +9,7 @@ body h3 {
   font-weight: 300;
 }
 
-main {
+.main {
   width: 100%;
   margin: 1rem auto 0;
   max-width: 2000px;
@@ -269,33 +269,33 @@ main {
 }
 
 @media only screen and (max-width: 1200px) {
-  main .cards-2 picture {
+  .main .cards-2 picture {
     width: calc(100% - 2rem);
     aspect-ratio: 3/2;
   }
 }
 @media only screen and (max-width: 900px) {
-  main .cards-2 picture {
+  .main .cards-2 picture {
     width: calc(50% - 1rem);
   }
 }
 @media only screen and (max-width: 600px) {
-  main .cards-2 picture {
+  .main .cards-2 picture {
     width: calc(100% - 2rem);
   }
 }
 @media only screen and (max-width: 1200px) {
-  main .cards-2 .card-text {
+  .main .cards-2 .card-text {
     width: calc(100% - 3rem);
   }
 }
 @media only screen and (max-width: 900px) {
-  main .cards-2 .card-text {
+  .main .cards-2 .card-text {
     width: calc(50% - 2rem);
   }
 }
 @media only screen and (max-width: 600px) {
-  main .cards-2 .card-text {
+  .main .cards-2 .card-text {
     width: calc(100% - 3rem);
   }
 }

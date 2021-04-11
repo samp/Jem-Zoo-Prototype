@@ -1,5 +1,5 @@
 $background-image: "../images/topography.svg";
-$palette-pink: #EC4899;
+
 
 @use "mixins.scss";
 
@@ -20,12 +20,8 @@ $palette-purple: #3E1052;
 $palette-green: #00704A;
 $palette-teal: #00B2AF;
 $palette-yellow: #FFD747;
-$palette-orange: #F47736;
+$palette-pink: #EC4899;
 $background-color: #fff;
-
-$hero-palette: $palette-pink,
-$palette-yellow,
-$palette-teal;
 
 // Breakpoints
 $breakpoint-xl: 2000px;
@@ -46,7 +42,7 @@ body {
     }
 }
 
-main {
+.main {
     width: 100%;
     margin: 1rem auto 0;
     max-width: 2000px;
@@ -308,7 +304,7 @@ main {
 
 }
 
-main {
+.main {
     .cards-2 {
         picture {
             @media only screen and (max-width: $breakpoint-wide) {
