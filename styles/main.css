@@ -146,36 +146,36 @@ img {
   background-color: #00B2AF;
 }
 @media only screen and (max-width: 600px) {
-  .header nav ul {
+  .header .navbar .menu {
     margin: 0;
     width: 100%;
-    margin-bottom: 1rem;
     display: flex;
     flex-flow: row;
     justify-content: space-around;
+    padding-bottom: 1rem;
   }
-  .header nav ul li {
+  .header .navbar .menu li {
     width: calc(25% - 1rem);
   }
-  .header nav ul li:nth-child(1) a {
+  .header .navbar .menu li:nth-child(1) a {
     background-image: url(../images/hippo.svg);
   }
-  .header nav ul li:nth-child(2) a {
+  .header .navbar .menu li:nth-child(2) a {
     background-image: url(../images/map.svg);
   }
-  .header nav ul li:nth-child(3) a {
+  .header .navbar .menu li:nth-child(3) a {
     background-image: url(../images/hand.svg);
   }
-  .header nav ul li:nth-child(4) a {
+  .header .navbar .menu li:nth-child(4) a {
     background-image: url(../images/ticket.svg);
   }
-  .header nav ul a {
+  .header .navbar .menu li a {
     display: inline-block;
     background-repeat: no-repeat;
     background-position: center;
     height: 2rem;
     width: 100%;
-    padding: 0.5rem;
+    padding: 0.5rem !important;
     font-size: 0;
   }
 }
