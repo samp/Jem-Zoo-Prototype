@@ -20,7 +20,7 @@ $palette-purple: #3E1052;
 $palette-green: #00704A;
 $palette-teal: #00B2AF;
 $palette-yellow: #FFD747;
-$palette-pink: #EC4899;
+$palette-pink: #00B2AF;
 $background-color: #fff;
 
 // Breakpoints
@@ -43,7 +43,7 @@ body {
 }
 
 .main {
-    width: 100%;
+    //width: 100%;
     margin: 1rem auto 0;
     max-width: 2000px;
 }
@@ -162,10 +162,10 @@ body {
     }
 
     h3 {
-        font-size: 2.1vw;
+        font-size: 1.7vw;
 
         @media only screen and (max-width: $breakpoint-medium) {
-            font-size: 3vw;
+            font-size: 4vw;
         }
 
         @media only screen and (max-width: $breakpoint-menu) {
@@ -179,7 +179,7 @@ body {
 
     p {
         text-align: center;
-        font-size: 1.5vw;
+        font-size: 1.2vw;
         display: block;
         flex-basis: auto;
         margin: 0.5rem 0;

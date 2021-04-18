@@ -10,7 +10,6 @@ body h3 {
 }
 
 .main {
-  width: 100%;
   margin: 1rem auto 0;
   max-width: 2000px;
 }
@@ -129,11 +128,11 @@ body h3 {
   }
 }
 #kids-hero h3 {
-  font-size: 2.1vw;
+  font-size: 1.7vw;
 }
 @media only screen and (max-width: 900px) {
   #kids-hero h3 {
-    font-size: 3vw;
+    font-size: 4vw;
   }
 }
 @media only screen and (max-width: 600px) {
@@ -146,7 +145,7 @@ body h3 {
 }
 #kids-hero p {
   text-align: center;
-  font-size: 1.5vw;
+  font-size: 1.2vw;
   display: block;
   flex-basis: auto;
   margin: 0.5rem 0;
@@ -172,7 +171,7 @@ body h3 {
   }
 }
 #kids-hero .kids-hero-group:nth-of-type(2) > * {
-  background-color: #EC4899;
+  background-color: #00B2AF;
 }
 #kids-hero .kids-hero-group:nth-of-type(3) > * {
   background-color: #FFD747;
