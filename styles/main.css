@@ -72,7 +72,7 @@ img {
 .header h1 {
   font-family: "Chelsea Market", Arial, Helvetica, sans-serif;
   margin: 0;
-  font-size: 3rem;
+  font-size: 3.5rem;
   padding: 1rem 0;
 }
 @media only screen and (max-width: 450px) {
@@ -102,6 +102,7 @@ img {
 }
 .header .navbar {
   font-family: "Montserrat", Arial, Helvetica, sans-serif;
+  font-size: 1.4rem;
   text-transform: uppercase;
   width: 66%;
   display: flex;

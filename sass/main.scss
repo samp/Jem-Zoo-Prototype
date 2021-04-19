@@ -107,7 +107,7 @@ img {
     h1 {
         font-family: $main-font;
         margin: 0;
-        font-size: 3rem;
+        font-size: 3.5rem;
         padding: 1rem 0;
 
         @media only screen and (max-width: $breakpoint-small) {
@@ -136,6 +136,7 @@ img {
 
     .navbar {
         font-family: $secondary-font;
+        font-size: 1.4rem;
         text-transform: uppercase;
         width: 66%;
         display: flex;
@@ -155,7 +156,7 @@ img {
             flex-flow: row;
             align-items: stretch;
             width: 100%;
-            
+
 
             li {
                 width: 25%;
@@ -243,7 +244,7 @@ img {
     }
 
     .card {
-        flex-flow:column;
+        flex-flow: column;
         max-width: calc(25% - 2rem);
 
         @media only screen and (max-width: $breakpoint-medium) {

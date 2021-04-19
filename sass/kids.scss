@@ -43,9 +43,16 @@ body {
 }
 
 .main {
-    //width: 100%;
     margin: 1rem auto 0;
     max-width: 2000px;
+}
+
+.header {
+    .navbar {
+        font-family: $secondary-font;
+        letter-spacing: 4px;
+        font-size: 1.5rem;
+    }
 }
 
 #kids-hero {
@@ -139,6 +146,7 @@ body {
 
         h2 {
             font-size: 3vw;
+
             @media only screen and (min-width: $breakpoint-xl) {
                 font-size: 4rem;
             }
