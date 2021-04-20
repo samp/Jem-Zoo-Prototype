@@ -241,11 +241,6 @@ img {
   flex-flow: row;
   flex-wrap: wrap;
 }
-.cards-4 a,
-.cards-4 a:visited {
-  text-decoration: none;
-  color: black;
-}
 @media only screen and (max-width: 450px) {
   .cards-4 {
     flex-flow: column;
@@ -267,19 +262,6 @@ img {
   .cards-4 .card {
     min-width: calc(100% - 2rem);
   }
-}
-.cards-4 .card-link-wrapper {
-  display: flex;
-  flex-flow: column;
-  height: 100%;
-  flex-grow: 1;
-}
-.cards-4 .card-link-wrapper, .cards-4 .card-link-wrapper:hover {
-  transition: all 0.2s linear;
-}
-.cards-4 .card-link-wrapper:hover {
-  color: white;
-  background-color: #00B2AF;
 }
 .cards-4 .card-text {
   padding: 1rem;
@@ -408,15 +390,14 @@ img {
 }
 
 .button {
-  background-color: #00704A;
+  background-color: #276D3E;
+  color: white;
   display: inline-block;
   text-align: center;
   border: none;
   border-radius: 1rem;
   align-self: center;
   margin-top: auto;
-  width: 50%;
-  min-width: fit-content;
   padding: 1rem;
 }
 .button, .button:hover {
@@ -424,7 +405,7 @@ img {
 }
 .button:hover {
   color: white;
-  background-color: #00B2AF;
+  background-color: #3E1052;
 }
 
 .footer {

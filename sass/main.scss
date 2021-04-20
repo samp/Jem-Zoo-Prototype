@@ -16,7 +16,7 @@ sans-serif;
 
 // Colour scheme
 $palette-purple: #3E1052;
-$palette-green: #00704A;
+$palette-green: #276D3E;
 $palette-teal: #00B2AF;
 $palette-yellow: #FFDD61;
 $background-color: #fff;
@@ -234,7 +234,6 @@ img {
 }
 
 .cards-4 {
-    @include mixins.plain-links(black);
     display: flex;
     flex-flow: row;
     flex-wrap: wrap;
@@ -257,14 +256,6 @@ img {
         @media only screen and (max-width: $breakpoint-small) {
             min-width: calc(100% - 2rem);
         }
-    }
-
-    .card-link-wrapper {
-        @include mixins.hover-links($palette-teal);
-        display: flex;
-        flex-flow: column;
-        height: 100%;
-        flex-grow: 1;
     }
 
     .card-text {
@@ -400,16 +391,15 @@ img {
 }
 
 .button {
-    @include mixins.hover-links($palette-teal);
+    @include mixins.hover-links($palette-purple);
     background-color: $palette-green;
+    color: white;
     display: inline-block;
     text-align: center;
     border: none;
     border-radius: 1rem;
     align-self: center;
     margin-top: auto;
-    width: 50%;
-    min-width: fit-content;
     padding: 1rem;
 }
 

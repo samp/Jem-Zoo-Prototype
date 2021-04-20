@@ -18,9 +18,8 @@ sans-serif;
 // Colour scheme
 $palette-purple: #3E1052;
 $palette-green: #00704A;
-$palette-teal: #00B2AF;
+$palette-teal: #3ec2c0;
 $palette-yellow: #FFD747;
-$palette-pink: #00B2AF;
 $background-color: #fff;
 
 // Breakpoints
@@ -212,11 +211,14 @@ body {
     }
 
     .kids-hero-group:nth-of-type(2)>* {
-        background-color: $palette-pink;
+        background-color: $palette-teal;
+        a {
+            color: black;
+        }
     }
 
     .kids-hero-group:nth-of-type(3)>* {
-        background-color: $palette-yellow;
+        background-color: $palette-teal;
 
         a {
             color: black;
@@ -226,6 +228,9 @@ body {
 
     .kids-hero-group:nth-of-type(4)>* {
         background-color: $palette-teal;
+        a {
+            color: black;
+        }
     }
 
 
